@@ -45,7 +45,7 @@ export async function POST(req) {
       method: "POST",
       headers: {
         accept: "application/json",
-        "api-key": "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",
+        "api-key": "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",
         "content-type": "application/json",
       },
       body: JSON.stringify({
