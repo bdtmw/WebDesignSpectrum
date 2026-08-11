@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 const services = [
   {
-    href: "/static-website",
+    href: "/wyoming-web-design",
     label: "Static Website",
   },
   {
@@ -79,7 +79,7 @@ const overlayMenuItems = [
     label: "Home",
   },
   {
-    href: "/static-website",
+    href: "/wyoming-web-design",
     label: "Services",
   },
   {
