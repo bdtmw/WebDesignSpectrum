@@ -31,7 +31,7 @@ const PackageForm = ({ packageTitle }) => {
         const loading = toast.loading("Submitting...");
 
         try {
-            const response = await axios.post("/api/forms", {
+            const response = await axios.post("/api/contact", {
                 formType: "package",
                 ...data,
             });
