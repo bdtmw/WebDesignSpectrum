@@ -32,6 +32,8 @@ const JourneyForm = () => {
                 ...data,
             });
 
+            console.log(response)
+
             if (response.data.success) {
                 toast.dismiss(loading);
                 toast.success("Form submitted successfully!");
