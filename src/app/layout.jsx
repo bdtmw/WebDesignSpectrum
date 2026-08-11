@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer/Footer";
 import Header from "@/components/layout/Header/Header";
 import AOSProvider from "@/components/hooks/AOSProvider";
 import { Toaster } from "react-hot-toast";
+import Script from "next/script";
 
 
 const openSans = Open_Sans({
@@ -30,6 +31,22 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${openSans.variable} ${poppins.variable}`}
     >
+      <head>
+    <Script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7157JGNQ3C"
+    />
+
+    <Script id="google-analytics">
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7157JGNQ3C');
+      `}
+    </Script>
+  </head>
+      </head>
       <body>
         <Header />
         <AOSProvider />
