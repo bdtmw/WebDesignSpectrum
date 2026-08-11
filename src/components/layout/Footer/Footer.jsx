@@ -43,7 +43,7 @@ const footerColumns = [
   {
     title: "Services",
     links: [
-      { label: "Static Websites", href: "/static-website" },
+      { label: "Static Websites", href: "/wyoming-web-design" },
       { label: "Cms Development", href: "/cms-website-development" },
       { label: "E-Commerce", href: "/ecommerce-solution" },
       { label: "Web Application", href: "/web-application" },
