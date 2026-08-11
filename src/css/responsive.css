@@ -1,0 +1,249 @@
+@media(max-width:1199px) {
+    .app-infos p {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 768px) {
+    .whether-you .main-heading h2 {
+        font-size: 30px;
+    }
+
+    .wbport {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .innserservice-commonfolds.mobile {
+        background: unset;
+    }
+
+    .innserservice-commonfolds .btnwrap .home-btn {
+        width: 50%;
+    }
+
+    .innserservice-commonfolds h1 {
+        font-size: 30px;
+    }
+
+    .build-to-win .offset-md-2 {
+        margin-left: unset;
+    }
+
+    .webcta h3 {
+        font-size: 18px;
+    }
+
+    .webcta .btnwrap {
+        display: block;
+        margin: unset;
+    }
+
+    .webcta .btnwrap .home-btn {
+        margin-bottom: 20px;
+    }
+
+    .inerservice-banner form {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .inerservice-banner .isb-textwrapper {
+        padding: 0 0px 0 0;
+    }
+
+    .portfolio-fixed .left {
+        display: none;
+    }
+
+    .portfolio-fixed div.row {
+        background-size: 200%;
+        background-position: left;
+    }
+
+    section.portfolio-fixed:nth-child(odd) .row {
+        background-size: 200%;
+        background-position: right;
+    }
+}
+
+@media(max-width:575px) {
+    .build-to-win .main-heading h2 {
+        font-size: 30px;
+    }
+
+    .build-to-win .main-heading p {
+        font-size: 16px;
+    }
+
+    .mobile-appInfo .textwrap h2 {
+        font-size: 30px;
+    }
+
+    .mobile-appInfo .textwrap p {
+        font-size: 16px;
+    }
+
+    .webcta p {
+        margin-bottom: 20px;
+    }
+
+    .innserservice-commonfolds.mobapp {
+        background: unset;
+    }
+
+    .app-infos .col-12 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .app-btn {
+        max-width: 180px;
+    }
+
+    .portfolio-fixed .right {
+        padding: 150px 60px;
+    }
+
+}
+
+@media(max-width:414px) {
+    .feature-carousel {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        align-items: center;
+        height: 100%;
+        gap: 30
+    }
+
+    .inerservice-banner {
+        padding: 60px 0px;
+    }
+
+    .inerservice-banner .isb-textwrapper h1 {
+        font-size: 30px;
+    }
+
+    .inerservice-banner .home-btn {
+        width: 100%;
+    }
+
+    .innserservice-commonfolds h6 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .innserservice-commonfolds h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .innserservice-commonfolds p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .webcta {
+        padding: 40px 0px 40px;
+    }
+
+    .webcta h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .webcta .btnwrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .webcta .btnwrap .home-btn {}
+
+    .mobile-appInfo .topwrap {
+        display: block;
+    }
+
+    .mobile-appInfo .textwrap {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .mobile-appInfo .btnwrap {
+        width: 100%;
+        text-align: center;
+    }
+
+    .webcta p {
+        text-align: center;
+    }
+
+    .innserservice-commonfolds.mobile {
+        margin: 20px 0 40px;
+    }
+
+    .whether-you {
+        padding: 30px 0px;
+    }
+
+    .whether-you .main-heading {
+        width: 100%;
+    }
+
+    .whether-you .main-heading h2 {
+        font-size: 24px;
+    }
+
+    .whether-you .main-heading p {
+        font-size: 14px;
+    }
+
+    .whether-you .whether-box p {
+        font-size: 14px;
+    }
+
+    .testi-text h3 {
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+    .testi-text p {
+        font-size: 14px;
+    }
+
+    .app-btn {
+        max-width: 150px;
+    }
+}
+
+@media(max-width:375px) {
+    .inerservice-banner .isb-textwrapper h1 {
+        font-size: 24px;
+        padding-right: unset;
+    }
+
+    .mobile-appInfo {
+        padding: 30px 0px 60px 0px;
+    }
+
+    .mobile-appInfo .textwrap p {
+        font-size: 14px;
+    }
+
+    .mobile-appInfo .textwrap {
+        padding-right: unset;
+    }
+
+    .innserservice-commonfolds h6 {
+        font-size: 20px;
+    }
+
+    .techicons {
+        text-align: center;
+    }
+
+    .app-btn {
+        max-width: 130px;
+    }
+}
