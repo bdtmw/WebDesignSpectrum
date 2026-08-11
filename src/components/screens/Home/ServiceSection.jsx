@@ -7,7 +7,7 @@ const services = [
         title: "Static",
         subtitle: "Websites",
         desc: 'Fast, secure sites for small businesses',
-        href: "/static-website",
+        href: "/wyoming-web-design",
         delay: 200,
     },
     {
