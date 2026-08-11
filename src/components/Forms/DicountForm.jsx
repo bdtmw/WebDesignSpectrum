@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { discountSchema } from "@/schema/Schema";
 
-
+import axios from "axios";
 
 const DicountForm = () => {
     const pathname = usePathname();
