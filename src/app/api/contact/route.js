@@ -4,6 +4,9 @@ import ContactTemplate from "@/components/Template/ContactTemplate";
 import DiscountTemplate from "@/components/Template/DiscountTemplate";
 
 export async function POST(req) {
+
+  console.log("🔥 /api/forms POST HIT");
+  
   try {
     const body = await req.json();
 
