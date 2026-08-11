@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
       `}
     </Script>
   </head>
-      </head>
+    
       <body>
         <Header />
         <AOSProvider />
