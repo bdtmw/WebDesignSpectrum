@@ -33,7 +33,7 @@ export const metadata = {
     ],
 
     alternates: {
-        canonical: "https://webdesignspectrum.com/affordable-web-design",
+        canonical: "https://webdesignspectrum.com/wyoming-web-design",
     },
 };
 
