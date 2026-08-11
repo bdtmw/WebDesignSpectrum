@@ -1,12 +1,7 @@
-import { Resend } from "resend";
-
-export const resend = new Resend("re_QwgNkEj5_Px5Bc5Ctk7qGDSqgqPTPKsCX");
-
 import PackageTemplate from "@/components/Template/PackageTemplate";
 import JourneyTemplate from "@/components/Template/JourneyTemplate";
 import ContactTemplate from "@/components/Template/ContactTemplate";
 import DiscountTemplate from "@/components/Template/DiscountTemplate";
-
 
 export async function POST(req) {
   try {
@@ -16,7 +11,6 @@ export async function POST(req) {
     let html = "";
 
     switch (body.formType) {
-
       case "contact":
         subject = "📩 New Contact Form";
         html = ContactTemplate(body);
@@ -47,19 +41,47 @@ export async function POST(req) {
         );
     }
 
-    await resend.emails.send({
-      from: "Web Design Spectrum <noreply@webdesignspectrum.com>",
-      to: ["info@webdesignspectrum.com"],
-      subject,
-      html,
+    const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "api-key": "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",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        sender: {
+          name: "Web Design Spectrum",
+          email: "noreply@webdesignspectrum.com",
+        },
+        to: [
+          {
+            email: "info@webdesignspectrum.com",
+          },
+        ],
+        subject,
+        htmlContent: html,
+      }),
     });
+
+    if (!response.ok) {
+      const error = await response.json();
+
+      return Response.json(
+        {
+          success: false,
+          message: error.message || "Failed to send email",
+        },
+        { status: response.status }
+      );
+    }
+
+    const result = await response.json();
 
     return Response.json({
       success: true,
+      messageId: result.messageId,
     });
-
   } catch (err) {
-
     return Response.json(
       {
         success: false,
