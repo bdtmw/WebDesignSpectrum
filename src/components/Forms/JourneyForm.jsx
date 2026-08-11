@@ -27,7 +27,7 @@ const JourneyForm = () => {
         const loading = toast.loading("Sending...");
 
         try {
-            const response = await axios.post("/api/forms", {
+            const response = await axios.post("/api/contact", {
                 formType: "journey",
                 ...data,
             });
