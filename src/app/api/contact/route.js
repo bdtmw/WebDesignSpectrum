@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-export const resend = new Resend("324j3hg423hjasnbad);
+export const resend = new Resend("324j3hg423hjasnbad");
 
 import PackageTemplate from "@/components/Template/PackageTemplate";
 import JourneyTemplate from "@/components/Template/JourneyTemplate";
