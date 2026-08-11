@@ -77,6 +77,9 @@ export async function POST(req) {
 
     const result = await response.json();
 
+    console.log("Brevo status:", response.status);
+console.log("Brevo response:", result);
+
     return Response.json({
       success: true,
       messageId: result.messageId,
