@@ -11,7 +11,7 @@ const features = [
     id: 1,
     title: "Static",
     subtitle: "Website",
-    href: "/static-website",
+    href: "/wyoming-web-design",
     iconClass: "sprite-feature-icon-1",
   },
   {
