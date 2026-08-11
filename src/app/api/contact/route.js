@@ -4,9 +4,8 @@ import ContactTemplate from "@/components/Template/ContactTemplate";
 import DiscountTemplate from "@/components/Template/DiscountTemplate";
 
 export async function POST(req) {
+  console.log("🔥 /api/contact POST HIT");
 
-  console.log("🔥 /api/forms POST HIT");
-  
   try {
     const body = await req.json();
 
@@ -44,54 +43,56 @@ export async function POST(req) {
         );
     }
 
-    const response = await fetch("https://api.brevo.com/v3/smtp/email", {
-      method: "POST",
-      headers: {
-        accept: "application/json",
-        "api-key": "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",
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        sender: {
-          name: "Web Design Spectrum",
-          email: "noreply@webdesignspectrum.com",
+    const response = await fetch(
+      "https://api.smtp2go.com/v3/email/send",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        to: [
-          {
-            email: "info@webdesignspectrum.com",
-          },
-        ],
-        subject,
-        htmlContent: html,
-      }),
-    });
+        body: JSON.stringify({
+          api_key: "api-82B809750B784CDEBCA58EAA7D3FBFCD",
 
-    if (!response.ok) {
-      const error = await response.json();
+          sender: "Web Design Spectrum <noreply@webdesignspectrum.com>",
 
-      return Response.json(
-        {
-          success: false,
-          message: error.message || "Failed to send email",
-        },
-        { status: response.status }
-      );
-    }
+          to: ["info@webdesignspectrum.com"],
+
+          subject,
+
+          html_body: html,
+        }),
+      }
+    );
 
     const result = await response.json();
 
-    console.log("Brevo status:", response.status);
-console.log("Brevo response:", result);
+    console.log("🔥 SMTP2GO status:", response.status);
+    console.log("🔥 SMTP2GO response:", result);
+
+    if (!response.ok || result.data?.succeeded !== 1) {
+      return Response.json(
+        {
+          success: false,
+          message:
+            result.data?.error ||
+            result.error ||
+            "Failed to send email",
+        },
+        { status: 500 }
+      );
+    }
 
     return Response.json({
       success: true,
-      messageId: result.messageId,
+      messageId: result.data?.email_id,
     });
   } catch (err) {
+    console.error("🔥 SMTP2GO error:", err);
+
     return Response.json(
       {
         success: false,
-        message: err.message,
+        message: err.message || "Something went wrong",
       },
       { status: 500 }
     );
