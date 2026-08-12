@@ -40,7 +40,8 @@ const PackageForm = ({ packageTitle }) => {
                 if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", "form_submit", {
         form_name: "package_form",
-        page_name: data.src,
+        page_name: window.location.pathname,
+            debug_mode: true,
     });
 }
                 toast.dismiss(loading);
