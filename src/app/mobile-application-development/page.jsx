@@ -138,6 +138,7 @@ const Page = () => {
                     minititle={mobileApplicationDevelopment.banner.minititle}
                 ></BannerSection>
                 <AwardSection
+                    
                     awards={mobileApplicationDevelopment.awards.items}
                     title={mobileApplicationDevelopment.awards.title}
                 />
