@@ -53,6 +53,14 @@ const DicountForm = () => {
             });
 
             if (response.data.success) {
+
+                if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "form_submit", {
+        form_name: "discount_form",
+        page_name: data.src,
+    });
+}
+                
                 toast.dismiss(loading);
                 toast.success("Discount request submitted!");
 
