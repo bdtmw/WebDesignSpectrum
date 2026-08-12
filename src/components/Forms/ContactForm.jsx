@@ -54,6 +54,15 @@ const ContactForm = () => {
             });
 
             if (response.data.success) {
+
+              
+            if (typeof window !== "undefined" && window.gtag) {
+                window.gtag("event", "form_submit", {
+                    form_name: "contact_form",
+                    page_name: data.src,
+                });
+            }
+                
                 toast.dismiss(loading);
                 toast.success("Quote request submitted successfully!");
 
