@@ -58,8 +58,9 @@ const ContactForm = () => {
               
             if (typeof window !== "undefined" && window.gtag) {
                 window.gtag("event", "form_submit", {
-                    form_name: "contact_form",
-                    page_name: data.src,
+                    form_name: "hero_form",
+                    page_name: window.location.pathname,
+            debug_mode: true,
                 });
             }
                 
