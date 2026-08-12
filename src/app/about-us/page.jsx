@@ -15,6 +15,14 @@ const bannerPoints = [
   "Create an instant impact on your target audience.",
 ];
 
+export const metadata  = {
+  title: "About Us | Web Design & Digital Solutions Experts",
+  description:
+    "Learn about Us Web Design Spectrum and our expert team delivering web design, development, SEO, digital marketing, and branding solutions.",
+  alternates: {
+    canonical: "https://webdesignspectrum.com/about-us",
+  },
+};
 
 
 const page = () => {

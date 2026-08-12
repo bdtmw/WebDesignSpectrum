@@ -3,6 +3,16 @@ import BannerSection from '@/components/sections/BannerSection'
 import PrivacyPolicy from '@/components/screens/Agreements/PrivacyPolicy'
 import BeginYourJourneySection from '@/components/sections/BeginYourJourneySection'
 
+
+export const metadata = {
+  title: "Privacy Policy | Web Design Spectrum",
+  description:
+    "Read the Web Design Spectrum privacy policy to learn how we collect, use, protect, and manage your personal and technical information.",
+  alternates: {
+    canonical: "https://webdesignspectrum.com/privacy",
+  },
+};
+
 const page = () => {
     return (
         <div>

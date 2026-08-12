@@ -4,6 +4,17 @@ import BannerSection from '@/components/sections/BannerSection'
 import BeginYourJourneySection from '@/components/sections/BeginYourJourneySection'
 import React from 'react'
 
+
+export const metadata = {
+  title: "Contact Us | Web Design & Digital Marketing Experts",
+  description:
+    "Contact Us Web Design Spectrum for professional web design, development, SEO, and digital marketing services. Get a free consultation today.",
+  alternates: {
+    canonical: "https://webdesignspectrum.com/contact",
+  },
+};
+
+
 const page = () => {
   return (
     <div>

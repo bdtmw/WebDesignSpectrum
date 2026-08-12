@@ -6,6 +6,16 @@ import ComboPackageSection from '@/components/screens/Package/ComboPackageSectio
 import BeginYourJourneySection from '@/components/sections/BeginYourJourneySection'
 
 
+export const metadata = {
+    title: "Web Design Packages & Pricing | Web Design Spectrum",
+    description:
+        "Explore affordable web design packages for startups and businesses. Choose flexible website design plans tailored to your goals and budget.",
+    alternates: {
+        canonical: "https://webdesignspectrum.com/packages",
+    },
+};
+
+
 const page = () => {
     return (
         <>

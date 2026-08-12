@@ -5,6 +5,17 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 import {   application,  logoDesigns, marketingPortfolio, websitePortfolio } from '@/components/hooks/Portfolio';
 
 
+
+export const metadata = {
+  title: "Web Design Portfolio | Web Design Spectrum",
+  description:
+    "Explore our web design portfolio featuring professional websites, digital marketing, branding, and creative design projects for businesses.",
+  alternates: {
+    canonical: "https://webdesignspectrum.com/portfolio",
+  },
+};
+
+
 const portfolioData = {
     website: websitePortfolio,
     marketing: marketingPortfolio,
