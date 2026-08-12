@@ -90,7 +90,7 @@ const ComboPackageSection = () => {
 
                                                     <p>{column.offer}</p>
 
-                                                    <Link href="/conatct">
+                                                    <Link href="/contact">
                                                         <button
                                                             className="chat-btn"
                                                         >
