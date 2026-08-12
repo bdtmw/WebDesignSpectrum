@@ -37,7 +37,7 @@ const footerColumns = [
     links: [
       { label: "Home", href: "/" },
       { label: "Portfolio", href: "/portfolio" },
-      { label: "Packages", href: "/package" },
+      { label: "Packages", href: "/packages" },
     ],
   },
   {
@@ -45,17 +45,17 @@ const footerColumns = [
     links: [
       { label: "Static Websites", href: "/wyoming-web-design" },
       { label: "Cms Development", href: "/cms-website-development" },
-      { label: "E-Commerce", href: "/ecommerce-solution" },
-      { label: "Web Application", href: "/web-application" },
-      { label: "Mobile Application", href: "/mobile-application" },
+      { label: "E-Commerce", href: "/ecommerce-web-development" },
+      { label: "Web Application", href: "/web-application-development" },
+      { label: "Mobile Application", href: "/mobile-application-development" },
     ],
   },
   {
     title: "Services",
     links: [
-      { label: "Logo Design", href: "/logo-design" },
-      { label: "Social Media Marketing", href: "/smm-services" },
-      { label: "Search Engine Optimization", href: "/seo-services" },
+      { label: "Logo Design", href: "/logo-and-branding" },
+      { label: "Social Media Marketing", href: "/social-media-marketing-services-for-small-businesses" },
+      { label: "Search Engine Optimization", href: "/seo-friendly-web-design" },
     ],
   },
   {

@@ -14,27 +14,27 @@ const services = [
     label: "Cms Development",
   },
   {
-    href: "/ecommerce-solution",
+    href: "/ecommerce-web-development",
     label: "E-Commerce",
   },
   {
-    href: "/web-application",
+    href: "/web-application-development",
     label: "Web Application",
   },
   {
-    href: "/mobile-application",
+    href: "/mobile-application-development",
     label: "Mobile Application",
   },
   {
-    href: "/logo-design",
+    href: "/logo-and-branding",
     label: "Logo Design",
   },
   {
-    href: "/seo-services",
+    href: "/seo-friendly-web-design",
     label: "SEO",
   },
   {
-    href: "/smm-services",
+    href: "/social-media-marketing-services-for-small-businesses",
     label: "SMM",
   },
 
@@ -54,7 +54,7 @@ const desktopMenuItems = [
     items: services,
   },
   {
-    href: "/package",
+    href: "/packages",
     label: "Packages",
   },
   {
@@ -83,7 +83,7 @@ const overlayMenuItems = [
     label: "Services",
   },
   {
-    href: "/package",
+    href: "/packages",
     label: "Packages",
   },
   {

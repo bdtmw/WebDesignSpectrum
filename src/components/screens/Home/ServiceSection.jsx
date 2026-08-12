@@ -15,7 +15,7 @@ const services = [
         title: "Ecommerce",
         subtitle: "Websites",
         desc: 'Sell online without breaking the bank',
-        href: "/ecommerce-solution",
+        href: "/ecommerce-web-development",
         delay: 400,
     },
     {
@@ -23,7 +23,7 @@ const services = [
         title: "Web",
         subtitle: "Application",
         desc: 'web application development',
-        href: "/web-application",
+        href: "/web-application-development",
         delay: 600,
     },
     {
@@ -39,7 +39,7 @@ const services = [
         title: "Logo",
         subtitle: "Design",
          desc: 'Sell online without breaking the bank',
-        href: "/logo-design",
+        href: "/logo-and-branding",
         delay: 1000,
     },
     {
@@ -47,7 +47,7 @@ const services = [
         title: "Seo Media",
         subtitle: "Marketing",
          desc: 'Grow your audience affordably',
-        href: "/smm-services",
+        href: "/social-media-marketing-services-for-small-businesses",
         delay: 1200,
     },
     {
@@ -55,7 +55,7 @@ const services = [
         title: "Search Engine",
         subtitle: "Optimization",
          desc: 'Get found by more local customers',
-        href: "/seo-services",
+        href: "/seo-friendly-web-design",
         delay: 1400,
     },
 ];

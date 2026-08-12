@@ -28,7 +28,7 @@ const PackageSection = () => {
 
         <div className="package-btn-wrap">
           <Link
-            href="/package"
+            href="/packages"
             className="home-btn left-right-mov"
           >
             View Our Packages
