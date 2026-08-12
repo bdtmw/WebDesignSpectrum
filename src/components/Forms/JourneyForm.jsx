@@ -36,10 +36,7 @@ const JourneyForm = () => {
 
             if (response.data.success) {
 
-                console.log("🔥 GA4 form_submit firing", {
-        form_name: "journey_form",
-        page_name: window.location.pathname,
-    });
+           
 
     if (typeof window !== "undefined" && window.gtag) {
         window.gtag("event", "form_submit", {
