@@ -35,6 +35,13 @@ const JourneyForm = () => {
             console.log(response)
 
             if (response.data.success) {
+
+                if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "journey_submit", {
+        form_name: "contact_form",
+        page_name: data.src,
+    });
+}
                 toast.dismiss(loading);
                 toast.success("Form submitted successfully!");
 
