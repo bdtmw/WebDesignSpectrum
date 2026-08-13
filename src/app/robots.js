@@ -2,8 +2,8 @@ export default function robots() {
   return {
     rules: {
       userAgent: "*",
-      allow: "/",
+      disallow: "",
     },
-    sitemap: "https://webdesignspectrum.com/sitemap.xml",
+    sitemap: "https://www.webdesignspectrum.com/",
   };
 }
