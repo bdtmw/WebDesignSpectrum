@@ -2261,19 +2261,19 @@ section.portfolio-fixed:nth-child(odd) .left img {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    font-family: 'Poppins', sans-serif
+    font-family: "Poppins", sans-serif;
 }
 
 .wds-pop.is-open {
-    display: flex
+    display: flex;
 }
 
 .wds-pop-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(8, 11, 28, .72);
+    background: rgba(8, 11, 28, 0.72);
     backdrop-filter: blur(3px);
-    animation: wdsFade .3s ease
+    animation: wdsFade 0.3s ease;
 }
 
 .wds-pop-card {
@@ -2285,9 +2285,13 @@ section.portfolio-fixed:nth-child(odd) .left img {
     background: #fff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, .45);
-    animation: wdsPop .35s cubic-bezier(.2, .8, .3, 1)
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    animation: wdsPop 0.35s cubic-bezier(0.2, 0.8, 0.3, 1);
 }
+
+/* =========================
+   Close Button
+========================= */
 
 .wds-pop-x {
     position: absolute;
@@ -2298,29 +2302,34 @@ section.portfolio-fixed:nth-child(odd) .left img {
     height: 34px;
     border: 0;
     border-radius: 50%;
-    background: rgba(255, 255, 255, .15);
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
     font-size: 24px;
     line-height: 1;
     cursor: pointer;
-    transition: .2s
+    transition: 0.2s;
 }
 
 .wds-pop-x:hover {
-    background: rgba(255, 255, 255, .3);
-    transform: rotate(90deg)
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
 }
 
-/* Offer side */
+/* =========================
+   Offer Side
+========================= */
+
 .wds-pop-offer {
-    background: linear-gradient(150deg, var(--navy), var(--navy-2));
+    background: linear-gradient(150deg,
+            var(--navy),
+            var(--navy-2));
     color: #fff;
     padding: 38px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .wds-pop-offer::before {
@@ -2330,8 +2339,12 @@ section.portfolio-fixed:nth-child(odd) .left img {
     right: -30%;
     width: 260px;
     height: 260px;
-    background: radial-gradient(circle, rgba(249, 87, 56, .35), transparent 65%)
+    background: radial-gradient(circle,
+            rgba(249, 87, 56, 0.35),
+            transparent 65%);
 }
+
+/* Badge */
 
 .wds-pop-badge {
     position: relative;
@@ -2344,22 +2357,26 @@ section.portfolio-fixed:nth-child(odd) .left img {
     text-transform: uppercase;
     padding: 5px 12px;
     border-radius: 20px;
-    margin-bottom: 14px
+    margin-bottom: 14px;
 }
+
+/* Big Discount */
 
 .wds-pop-big {
     position: relative;
     font-size: 76px;
     font-weight: 800;
-    line-height: .9;
-    color: var(--gold)
+    line-height: 0.9;
+    color: var(--gold);
 }
 
 .wds-pop-big span {
     font-size: 40px;
     vertical-align: super;
-    margin-left: 2px
+    margin-left: 2px;
 }
+
+/* Main Offer Text */
 
 .wds-pop-off {
     position: relative;
@@ -2367,22 +2384,26 @@ section.portfolio-fixed:nth-child(odd) .left img {
     font-weight: 800;
     letter-spacing: 4px;
     color: #fff;
-    margin-bottom: 14px
+    margin-bottom: 14px;
 }
+
+/* Description */
 
 .wds-pop-sub {
     position: relative;
     color: #c9cdea;
     font-size: 14px;
     margin-bottom: 18px;
-    line-height: 1.5
+    line-height: 1.5;
 }
+
+/* Benefits */
 
 .wds-pop-list {
     position: relative;
     list-style: none;
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 .wds-pop-list li {
@@ -2390,7 +2411,7 @@ section.portfolio-fixed:nth-child(odd) .left img {
     padding-left: 24px;
     font-size: 13px;
     color: #dde0f2;
-    margin-bottom: 9px
+    margin-bottom: 9px;
 }
 
 .wds-pop-list li::before {
@@ -2398,34 +2419,40 @@ section.portfolio-fixed:nth-child(odd) .left img {
     position: absolute;
     left: 0;
     color: var(--gold);
-    font-weight: 700
+    font-weight: 700;
 }
 
-/* Form side */
+/* =========================
+   Form Side
+========================= */
+
 .wds-pop-form {
     padding: 38px 34px;
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
 }
 
 .wds-pop-form h3 {
     font-size: 22px;
     font-weight: 800;
     color: var(--ink);
-    margin: 0 0 6px
+    margin: 0 0 6px;
 }
 
 .wds-pop-lead {
     font-size: 13.5px;
     color: var(--muted);
     margin: 0 0 18px;
-    line-height: 1.5
+    line-height: 1.5;
 }
+
+/* Inputs */
 
 .wds-pop-form input,
 .wds-pop-form select {
     width: 100%;
+    box-sizing: border-box;
     border: 1px solid #e3e6f2;
     border-radius: 10px;
     padding: 12px 15px;
@@ -2433,14 +2460,16 @@ section.portfolio-fixed:nth-child(odd) .left img {
     font-size: 14px;
     margin-bottom: 11px;
     background: var(--bg-soft);
-    color: var(--ink)
+    color: var(--ink);
 }
 
 .wds-pop-form input:focus,
 .wds-pop-form select:focus {
     outline: 2px solid var(--accent);
-    background: #fff
+    background: #fff;
 }
+
+/* Button */
 
 .wds-pop-btn {
     width: 100%;
@@ -2452,33 +2481,43 @@ section.portfolio-fixed:nth-child(odd) .left img {
     font-size: 15px;
     color: #fff;
     cursor: pointer;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    box-shadow: 0 8px 22px rgba(249, 87, 56, .35);
-    transition: .25s
+    background: linear-gradient(135deg,
+            var(--accent),
+            var(--accent-2));
+    box-shadow: 0 8px 22px rgba(249, 87, 56, 0.35);
+    transition: 0.25s;
 }
 
 .wds-pop-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(249, 87, 56, .45)
+    box-shadow: 0 12px 28px rgba(249, 87, 56, 0.45);
 }
+
+/* Fine Print */
 
 .wds-pop-fine {
     font-size: 10.5px;
     color: var(--muted);
     margin: 12px 0 0;
-    line-height: 1.45
+    line-height: 1.45;
 }
+
+/* Error */
 
 .wds-pop-err {
     display: none;
     color: #d33;
     font-size: 12px;
-    margin: 0 0 10px
+    margin: 0 0 10px;
 }
 
 .wds-pop-err.show {
-    display: block
+    display: block;
 }
+
+/* =========================
+   Thank You
+========================= */
 
 .wds-pop-check {
     width: 60px;
@@ -2489,73 +2528,163 @@ section.portfolio-fixed:nth-child(odd) .left img {
     font-size: 32px;
     display: grid;
     place-items: center;
-    margin: 0 auto 14px
+    margin: 0 auto 14px;
 }
 
 #wds-pop-thanks {
-    text-align: center
+    text-align: center;
 }
+
+/* =========================
+   Animations
+========================= */
 
 @keyframes wdsFade {
     from {
-        opacity: 0
+        opacity: 0;
     }
 
     to {
-        opacity: 1
+        opacity: 1;
     }
 }
 
 @keyframes wdsPop {
     from {
         opacity: 0;
-        transform: translateY(24px) scale(.96)
+        transform: translateY(24px) scale(0.96);
     }
 
     to {
         opacity: 1;
-        transform: none
+        transform: none;
     }
 }
 
-@media(max-width:640px) {
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 640px) {
+    .wds-pop {
+        padding: 15px;
+        align-items: center;
+    }
+
+    /*
+     * Hide the entire offer/discount
+     * section on mobile.
+     */
+    .wds-pop-offer {
+        display: none;
+    }
+
+    /*
+     * Make the card single column.
+     */
     .wds-pop-card {
         grid-template-columns: 1fr;
-        max-width: 400px
+        width: 100%;
+        max-width: 400px;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 18px;
     }
 
-    .wds-pop-offer {
-        padding: 26px 26px 22px;
-        text-align: center
-    }
-
-    .wds-pop-badge {
-        align-self: center
-    }
-
-    .wds-pop-big {
-        font-size: 60px
-    }
-
-    .wds-pop-list {
-        display: inline-block;
-        text-align: left
-    }
-
+    /*
+     * Form becomes the only visible
+     * section on mobile.
+     */
     .wds-pop-form {
-        padding: 26px
+        padding: 30px 24px;
+        width: 100%;
+        box-sizing: border-box;
     }
-}
 
-@media(prefers-reduced-motion:reduce) {
+    .wds-pop-form h3 {
+        font-size: 21px;
+        padding-right: 25px;
+    }
 
-    .wds-pop-overlay,
-    .wds-pop-card {
-        animation: none
+    .wds-pop-lead {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+
+    .wds-pop-form input,
+    .wds-pop-form select {
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+
+    .wds-pop-btn {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    /*
+     * Close button
+     */
+    .wds-pop-x {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        background: #f1f2f6;
+        color: #333;
+        font-size: 22px;
     }
 
     .wds-pop-x:hover {
-        transform: none
+        background: #e5e6eb;
+        transform: rotate(90deg);
+    }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 380px) {
+    .wds-pop {
+        padding: 10px;
+    }
+
+    .wds-pop-card {
+        max-width: 100%;
+        border-radius: 16px;
+    }
+
+    .wds-pop-form {
+        padding: 25px 18px;
+    }
+
+    .wds-pop-form h3 {
+        font-size: 19px;
+    }
+
+    .wds-pop-lead {
+        font-size: 12.5px;
+    }
+}
+
+/* =========================
+   Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .wds-pop-overlay,
+    .wds-pop-card {
+        animation: none;
+    }
+
+    .wds-pop-x:hover {
+        transform: none;
+    }
+
+    .wds-pop-btn:hover {
+        transform: none;
     }
 }
 
@@ -2644,21 +2773,53 @@ section.portfolio-fixed:nth-child(odd) .left img {
 
 
 .btn-shake:hover {
-  animation: shake 0.5s ease-in-out;
+    animation: shake 0.5s ease-in-out;
 }
 
 @keyframes shake {
-  0% { transform: translateX(0); }
-  10% { transform: translateX(-3px); }
-  20% { transform: translateX(3px); }
-  30% { transform: translateX(-3px); }
-  40% { transform: translateX(3px); }
-  50% { transform: translateX(-2px); }
-  60% { transform: translateX(2px); }
-  70% { transform: translateX(-2px); }
-  80% { transform: translateX(2px); }
-  90% { transform: translateX(-1px); }
-  100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    10% {
+        transform: translateX(-3px);
+    }
+
+    20% {
+        transform: translateX(3px);
+    }
+
+    30% {
+        transform: translateX(-3px);
+    }
+
+    40% {
+        transform: translateX(3px);
+    }
+
+    50% {
+        transform: translateX(-2px);
+    }
+
+    60% {
+        transform: translateX(2px);
+    }
+
+    70% {
+        transform: translateX(-2px);
+    }
+
+    80% {
+        transform: translateX(2px);
+    }
+
+    90% {
+        transform: translateX(-1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 
@@ -2666,96 +2827,96 @@ section.portfolio-fixed:nth-child(odd) .left img {
 /* PACKAGE MODAL  */
 
 .package-modal {
-  width: min(1100px, 95vw);
-  max-height: 90vh;
-  overflow: hidden;
-  border-radius: 18px;
-  background: #fff;
+    width: min(1100px, 95vw);
+    max-height: 90vh;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff;
 }
 
 .modal-content {
-  display: flex;
-  min-height: 650px;
+    display: flex;
+    min-height: 650px;
 }
 
 .modal-left {
-  flex: 1.4;
-  padding: 40px;
-  overflow-y: auto;
-  border-right: 1px solid #ececec;
+    flex: 1.4;
+    padding: 40px;
+    overflow-y: auto;
+    border-right: 1px solid #ececec;
 }
 
 .modal-right {
-  flex: 1;
-  padding: 40px;
-  background: #fafafa;
-  display: flex;
-  flex-direction: column;
+    flex: 1;
+    padding: 40px;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-right h3 {
-  font-size: 28px;
-  margin-bottom: 25px;
+    font-size: 28px;
+    margin-bottom: 25px;
 }
 
 .package-contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .package-contact-form input,
 .package-contact-form textarea {
-  width: 100%;
-  padding: 14px 16px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  outline: none;
-  font-size: 15px;
-  transition: .3s;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    transition: .3s;
 }
 
 .package-contact-form input:focus,
 .package-contact-form textarea:focus {
-  border-color: #000;
+    border-color: #000;
 }
 
 .package-contact-form textarea {
-  resize: vertical;
-  min-height: 140px;
+    resize: vertical;
+    min-height: 140px;
 }
 
 .package-buy-btn,
 .package-chat-btn {
-  width: 100%;
-  justify-content: center;
+    width: 100%;
+    justify-content: center;
 }
 
 .modal-feature-list {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .modal-feature-list li {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  margin-bottom: 18px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 18px;
 }
 
 @media (max-width: 900px) {
-  .modal-content {
-    flex-direction: column;
-  }
+    .modal-content {
+        flex-direction: column;
+    }
 
-  .modal-left {
-    border-right: none;
-    border-bottom: 1px solid #ececec;
-  }
+    .modal-left {
+        border-right: none;
+        border-bottom: 1px solid #ececec;
+    }
 
-  .modal-left,
-  .modal-right {
-    padding: 25px;
-  }
+    .modal-left,
+    .modal-right {
+        padding: 25px;
+    }
 }
 
 
@@ -2763,7 +2924,10 @@ section.portfolio-fixed:nth-child(odd) .left img {
 
 
 
-.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
     width: 100%;
     left: 0;
     bottom: -34px;

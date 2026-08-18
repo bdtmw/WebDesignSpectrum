@@ -42,3 +42,19 @@
 {"timestamp":"00:09:28.234","source":"Server","level":"LOG","message":"✓ Compiled in 504ms"}
 {"timestamp":"00:09:32.114","source":"Server","level":"LOG","message":"✓ Compiled in 485ms"}
 {"timestamp":"00:09:36.565","source":"Server","level":"LOG","message":"✓ Compiled in 604ms"}
+{"timestamp":"00:12:46.762","source":"Server","level":"LOG","message":"✓ Compiled in 272ms"}
+{"timestamp":"00:12:48.842","source":"Server","level":"LOG","message":"✓ Compiled in 682ms"}
+{"timestamp":"00:12:55.810","source":"Browser","level":"WARN","message":"Image with src \"/images/Mockups/social-logo.webp\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"00:12:55.870","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"/images/Mockups/social-logo.webp\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\" \"\\u001b[2m(file://D:/TMW PROJECTS/Next JS/Brands/WebDesignSpectrum/.next/dev/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477:13)\\u001b[22m\""}
+{"timestamp":"00:12:55.870","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"/images/Mockups/social-logo.webp\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"00:13:08.092","source":"Browser","level":"WARN","message":"Image with src \"/images/Mockups/social-logo.webp\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"00:13:08.094","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"/images/Mockups/social-logo.webp\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\" \"\\u001b[2m(file://D:/TMW PROJECTS/Next JS/Brands/WebDesignSpectrum/.next/dev/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477:13)\\u001b[22m\""}
+{"timestamp":"00:13:08.094","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"/images/Mockups/social-logo.webp\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"00:14:05.968","source":"Server","level":"LOG","message":"✓ Compiled in 3.8s"}
+{"timestamp":"00:14:15.284","source":"Server","level":"LOG","message":"✓ Compiled in 4.7s"}
+{"timestamp":"00:14:19.833","source":"Server","level":"LOG","message":"✓ Compiled in 851ms"}
+{"timestamp":"00:14:24.316","source":"Server","level":"LOG","message":"✓ Compiled in 1900ms"}
+{"timestamp":"00:14:29.414","source":"Server","level":"LOG","message":"✓ Compiled in 1410ms"}
+{"timestamp":"00:14:33.904","source":"Server","level":"LOG","message":"✓ Compiled in 1061ms"}
+{"timestamp":"00:15:05.643","source":"Server","level":"LOG","message":"✓ Compiled in 746ms"}
+{"timestamp":"00:15:11.546","source":"Server","level":"LOG","message":"✓ Compiled in 3.3s"}
