@@ -310,7 +310,7 @@ const Header = () => {
 
                 <button
                   type="button"
-                  className="btn btn-default hvr-grow-shadow"
+                  className="btn btn-default show hvr-grow-shadow"
                   data-bs-toggle="modal"
                   onClick={() => setIsDiscountOpen(true)}
                   data-bs-target="#discountModal"

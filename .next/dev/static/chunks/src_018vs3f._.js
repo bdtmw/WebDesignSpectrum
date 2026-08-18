@@ -796,11 +796,11 @@ const overlayMenuItems = [
 ];
 const DropdownMenu = (t0)=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(19);
-    if ($[0] !== "bccb299f6106938d7b2dbaeb8176e8dc97aa449d7e411dc161eccb1a0c34a8ad") {
+    if ($[0] !== "b5a33bd4576c7cc7da9cdc6ac61590e5c8121cb654a2964878a0b7014f5aa9ab") {
         for(let $i = 0; $i < 19; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "bccb299f6106938d7b2dbaeb8176e8dc97aa449d7e411dc161eccb1a0c34a8ad";
+        $[0] = "b5a33bd4576c7cc7da9cdc6ac61590e5c8121cb654a2964878a0b7014f5aa9ab";
     }
     const { label, items, isOpen, onToggle, onClose } = t0;
     const t1 = `nav-item dropdown ${isOpen ? "open show" : ""}`;
@@ -913,11 +913,11 @@ _c = DropdownMenu;
 const Header = ()=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(55);
-    if ($[0] !== "bccb299f6106938d7b2dbaeb8176e8dc97aa449d7e411dc161eccb1a0c34a8ad") {
+    if ($[0] !== "b5a33bd4576c7cc7da9cdc6ac61590e5c8121cb654a2964878a0b7014f5aa9ab") {
         for(let $i = 0; $i < 55; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "bccb299f6106938d7b2dbaeb8176e8dc97aa449d7e411dc161eccb1a0c34a8ad";
+        $[0] = "b5a33bd4576c7cc7da9cdc6ac61590e5c8121cb654a2964878a0b7014f5aa9ab";
     }
     const [isDiscountOpen, setIsDiscountOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [menuOpen, setMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -1204,7 +1204,7 @@ const Header = ()=>{
     if ($[25] === Symbol.for("react.memo_cache_sentinel")) {
         t17 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
             type: "button",
-            className: "btn btn-default hvr-grow-shadow",
+            className: "btn btn-default show hvr-grow-shadow",
             "data-bs-toggle": "modal",
             onClick: t16,
             "data-bs-target": "#discountModal",
@@ -1215,7 +1215,7 @@ const Header = ()=>{
                 }, void 0, false, {
                     fileName: "[project]/src/components/layout/Header/Header.jsx",
                     lineNumber: 363,
-                    columnNumber: 150
+                    columnNumber: 155
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
