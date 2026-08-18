@@ -26414,7 +26414,7 @@ li.list_hd {
   }
 
   .main-industry {
-    height: 500px;
+    height: 600px;
   }
 
   .footer-form-sec h3 {
@@ -26641,7 +26641,7 @@ li.list_hd {
   }
 
   .main-industry {
-    height: 400px;
+    height: 710px;
   }
 
   .industry-text {
@@ -26697,7 +26697,8 @@ li.list_hd {
   }
 
   .main-footer {
-    background-color: #e15d08;
+    background-image: url("/images/BgImages/FooterBgImages1.jpg");
+    background-color: var(--color-primary);
     background-image: none;
     height: auto;
     padding: 25px 0;
