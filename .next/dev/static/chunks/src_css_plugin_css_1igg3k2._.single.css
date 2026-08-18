@@ -26641,7 +26641,7 @@ li.list_hd {
   }
 
   .main-industry {
-    height: 710px;
+    height: 810px;
   }
 
   .industry-text {
@@ -26985,8 +26985,13 @@ li.list_hd {
     display: none;
   }
 
+  .brand-logo2 {
+    width: 65%;
+  }
+
   .brand-logo {
     width: auto;
+    margin-left: 5px;
   }
 
   .feature-carousel {
@@ -27054,7 +27059,7 @@ li.list_hd {
   }
 
   .detailHeader ul {
-    padding: 100px 0 0;
+    padding: 0;
   }
 
   .review-name h5 {
