@@ -31458,6 +31458,10 @@ li.list_hd {
         width: auto
     }
 
+    .feature-carousel {
+       grid-template-columns: 1fr ;
+    }
+
     .feature-carousel .owl-nav [class*=owl-].owl-prev {
         left: 0
     }
