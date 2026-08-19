@@ -46,7 +46,7 @@ const BehindStoreSection = ({
             data-aos="fade-down"
             data-aos-duration="1500"
         >
-            <div className="heading">
+            <div style={{ paddingLeft: 20 , paddingRight: 20}} className="heading">
 
                 {eyebrow && <h2>{eyebrow}</h2>}
 

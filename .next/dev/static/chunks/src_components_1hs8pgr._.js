@@ -1318,6 +1318,10 @@ const PortfolioSection = ({ title = "Enhancing Local Visibility with Targeted Ad
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        style: {
+                            marginTop: 10,
+                            marginBottom: 10
+                        },
                         children: heading
                     }, void 0, false, {
                         fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
@@ -1328,7 +1332,7 @@ const PortfolioSection = ({ title = "Enhancing Local Visibility with Targeted Ad
                         children: description
                     }, void 0, false, {
                         fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                        lineNumber: 52,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
@@ -1347,17 +1351,17 @@ const PortfolioSection = ({ title = "Enhancing Local Visibility with Targeted Ad
                             onClick: setActiveTab
                         }, tab.id, false, {
                             fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                            lineNumber: 57,
+                            lineNumber: 60,
                             columnNumber: 30
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                    lineNumber: 56,
+                    lineNumber: 59,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                lineNumber: 55,
+                lineNumber: 58,
                 columnNumber: 20
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1401,17 +1405,17 @@ const PortfolioSection = ({ title = "Enhancing Local Visibility with Targeted Ad
                                                 item: item
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                                                lineNumber: 84,
+                                                lineNumber: 87,
                                                 columnNumber: 27
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, item.id, false, {
                                             fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                                            lineNumber: 83,
+                                            lineNumber: 86,
                                             columnNumber: 51
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                                    lineNumber: 67,
+                                    lineNumber: 70,
                                     columnNumber: 48
                                 }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "row justify-content-center",
@@ -1420,22 +1424,22 @@ const PortfolioSection = ({ title = "Enhancing Local Visibility with Targeted Ad
                                             item: item_0
                                         }, item_0.id, false, {
                                             fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                                            lineNumber: 87,
+                                            lineNumber: 90,
                                             columnNumber: 53
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                                    lineNumber: 86,
+                                    lineNumber: 89,
                                     columnNumber: 33
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                                lineNumber: 66,
+                                lineNumber: 69,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         }, tab_0.id, false, {
                             fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                            lineNumber: 65,
+                            lineNumber: 68,
                             columnNumber: 41
                         }, ("TURBOPACK compile-time value", void 0))) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$hooks$2f$Fancybox$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         children: data.length > 6 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$swiper$2f$swiper$2d$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Swiper"], {
@@ -1468,17 +1472,17 @@ const PortfolioSection = ({ title = "Enhancing Local Visibility with Targeted Ad
                                         item: item_1
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                                        lineNumber: 110,
+                                        lineNumber: 113,
                                         columnNumber: 23
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, item_1.id, false, {
                                     fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                                    lineNumber: 109,
+                                    lineNumber: 112,
                                     columnNumber: 39
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, void 0, false, {
                             fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                            lineNumber: 93,
+                            lineNumber: 96,
                             columnNumber: 34
                         }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "row justify-content-center",
@@ -1487,27 +1491,27 @@ const PortfolioSection = ({ title = "Enhancing Local Visibility with Targeted Ad
                                     item: item_2
                                 }, item_2.id, false, {
                                     fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                                    lineNumber: 113,
+                                    lineNumber: 116,
                                     columnNumber: 39
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, void 0, false, {
                             fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                            lineNumber: 112,
+                            lineNumber: 115,
                             columnNumber: 29
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                        lineNumber: 92,
+                        lineNumber: 95,
                         columnNumber: 25
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                    lineNumber: 64,
+                    lineNumber: 67,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                lineNumber: 61,
+                lineNumber: 64,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             button && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1520,17 +1524,17 @@ const PortfolioSection = ({ title = "Enhancing Local Visibility with Targeted Ad
                         children: buttonText
                     }, void 0, false, {
                         fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                        lineNumber: 121,
+                        lineNumber: 124,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                    lineNumber: 120,
+                    lineNumber: 123,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
-                lineNumber: 119,
+                lineNumber: 122,
                 columnNumber: 18
             }, ("TURBOPACK compile-time value", void 0))
         ]
@@ -1564,81 +1568,92 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 const WorkDetailSection = (t0)=>{
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(14);
-    if ($[0] !== "00973facaedcf6a40d072b51e303a9e38c845f548f65c985d95582be6febf3be") {
-        for(let $i = 0; $i < 14; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(15);
+    if ($[0] !== "860d34c25777ddd556d0aa1e72afb7e4bc8aa3cbe5637bc757c5889537f43296") {
+        for(let $i = 0; $i < 15; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "00973facaedcf6a40d072b51e303a9e38c845f548f65c985d95582be6febf3be";
+        $[0] = "860d34c25777ddd556d0aa1e72afb7e4bc8aa3cbe5637bc757c5889537f43296";
     }
     const { title, subtitle, description } = t0;
     let t1;
-    if ($[1] !== title) {
-        t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+    if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
+        t1 = {
+            marginTop: 10,
+            marginBottom: 10
+        };
+        $[1] = t1;
+    } else {
+        t1 = $[1];
+    }
+    let t2;
+    if ($[2] !== title) {
+        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+            style: t1,
             children: title
         }, void 0, false, {
             fileName: "[project]/src/components/screens/Home/WorkDetailSection.jsx",
-            lineNumber: 20,
+            lineNumber: 30,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[1] = title;
-        $[2] = t1;
+        $[2] = title;
+        $[3] = t2;
     } else {
-        t1 = $[2];
+        t2 = $[3];
     }
-    let t2;
-    if ($[3] !== subtitle) {
-        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+    let t3;
+    if ($[4] !== subtitle) {
+        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
             children: subtitle
         }, void 0, false, {
             fileName: "[project]/src/components/screens/Home/WorkDetailSection.jsx",
-            lineNumber: 28,
+            lineNumber: 38,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[3] = subtitle;
-        $[4] = t2;
-    } else {
-        t2 = $[4];
-    }
-    let t3;
-    if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
-        t3 = {
-            marginTop: 10
-        };
+        $[4] = subtitle;
         $[5] = t3;
     } else {
         t3 = $[5];
     }
     let t4;
-    if ($[6] !== description) {
-        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-            style: t3,
+    if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
+        t4 = {
+            marginTop: 10
+        };
+        $[6] = t4;
+    } else {
+        t4 = $[6];
+    }
+    let t5;
+    if ($[7] !== description) {
+        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            style: t4,
             children: description
         }, void 0, false, {
             fileName: "[project]/src/components/screens/Home/WorkDetailSection.jsx",
-            lineNumber: 45,
+            lineNumber: 55,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[6] = description;
-        $[7] = t4;
-    } else {
-        t4 = $[7];
-    }
-    let t5;
-    if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
-        t5 = {
-            minWidth: "100%"
-        };
+        $[7] = description;
         $[8] = t5;
     } else {
         t5 = $[8];
     }
     let t6;
     if ($[9] === Symbol.for("react.memo_cache_sentinel")) {
-        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        t6 = {
+            minWidth: "100%"
+        };
+        $[9] = t6;
+    } else {
+        t6 = $[9];
+    }
+    let t7;
+    if ($[10] === Symbol.for("react.memo_cache_sentinel")) {
+        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                style: t5,
+                style: t6,
                 href: "/contact",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "package-btn-wrap",
@@ -1648,31 +1663,31 @@ const WorkDetailSection = (t0)=>{
                         children: "Get a Quote"
                     }, void 0, false, {
                         fileName: "[project]/src/components/screens/Home/WorkDetailSection.jsx",
-                        lineNumber: 62,
+                        lineNumber: 72,
                         columnNumber: 96
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/screens/Home/WorkDetailSection.jsx",
-                    lineNumber: 62,
+                    lineNumber: 72,
                     columnNumber: 61
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/screens/Home/WorkDetailSection.jsx",
-                lineNumber: 62,
+                lineNumber: 72,
                 columnNumber: 28
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/screens/Home/WorkDetailSection.jsx",
-            lineNumber: 62,
+            lineNumber: 72,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[9] = t6;
+        $[10] = t7;
     } else {
-        t6 = $[9];
+        t7 = $[10];
     }
-    let t7;
-    if ($[10] !== t1 || $[11] !== t2 || $[12] !== t4) {
-        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+    let t8;
+    if ($[11] !== t2 || $[12] !== t3 || $[13] !== t5) {
+        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
             className: "main-work-detail",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "container",
@@ -1681,34 +1696,34 @@ const WorkDetailSection = (t0)=>{
                     "data-aos": "zoom-in",
                     "data-aos-duration": "1500",
                     children: [
-                        t1,
                         t2,
-                        t4,
-                        t6
+                        t3,
+                        t5,
+                        t7
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/screens/Home/WorkDetailSection.jsx",
-                    lineNumber: 69,
+                    lineNumber: 79,
                     columnNumber: 75
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/screens/Home/WorkDetailSection.jsx",
-                lineNumber: 69,
+                lineNumber: 79,
                 columnNumber: 48
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/screens/Home/WorkDetailSection.jsx",
-            lineNumber: 69,
+            lineNumber: 79,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[10] = t1;
         $[11] = t2;
-        $[12] = t4;
-        $[13] = t7;
+        $[12] = t3;
+        $[13] = t5;
+        $[14] = t8;
     } else {
-        t7 = $[13];
+        t8 = $[14];
     }
-    return t7;
+    return t8;
 };
 _c = WorkDetailSection;
 const __TURBOPACK__default__export__ = WorkDetailSection;

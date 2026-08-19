@@ -17,7 +17,7 @@ export default function BusinessCase({
       <div className="container">
         <div className="row justify-content-end">
           <div
-            className="col-lg-6 col-md-12 industry-img"
+  className="col-lg-6 col-md-12 d-none d-md-flex align-items-center justify-content-center industry-img px-3"
             data-aos="fade-right"
             data-aos-duration="1500"
             style={{

@@ -67,7 +67,7 @@ const PortfolioSection = ({
     <section className="main-portfolio">
       <div className="heading">
         <h2>{title}</h2>
-        <h3>{heading}</h3>
+        <h3 style={{marginTop: 10 , marginBottom: 10}}>{heading}</h3>
         <p>{description}</p>
       </div>
 

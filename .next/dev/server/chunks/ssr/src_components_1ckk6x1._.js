@@ -980,6 +980,10 @@ const PortfolioSection = ({ title = "Enhancing Local Visibility with Targeted Ad
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        style: {
+                            marginTop: 10,
+                            marginBottom: 10
+                        },
                         children: heading
                     }, void 0, false, {
                         fileName: "[project]/src/components/screens/Home/PortfolioSection.jsx",
@@ -1230,6 +1234,10 @@ const WorkDetailSection = ({ title, subtitle, description })=>{
                 "data-aos-duration": "1500",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                        style: {
+                            marginTop: 10,
+                            marginBottom: 10
+                        },
                         children: title
                     }, void 0, false, {
                         fileName: "[project]/src/components/screens/Home/WorkDetailSection.jsx",

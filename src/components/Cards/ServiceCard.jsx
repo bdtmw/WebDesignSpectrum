@@ -2,9 +2,9 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 
-const ServiceCard = ({ service }) => {
+const ServiceCard = ({ service , className="col" }) => {
     return (
-        <div className="col">
+        <div className={className} >
             <div
                 className="service-box"
                 data-aos="zoom-in-right"

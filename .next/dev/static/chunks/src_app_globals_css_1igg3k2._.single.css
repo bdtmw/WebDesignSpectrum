@@ -313,6 +313,10 @@
     position: static;
   }
 
+  .col-4 {
+    grid-column: 4;
+  }
+
   .col-12 {
     grid-column: 12;
   }
@@ -529,6 +533,10 @@
   .bg-\[\#A31621\]\/10 {
     background-color: #a316211a;
     background-color: lab(35.6281% 55.0361 34.467 / .1);
+  }
+
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
   }
 
   .px-5 {

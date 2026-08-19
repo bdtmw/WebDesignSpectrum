@@ -88,8 +88,8 @@ const ServiceSection = () => {
 
             <div className="main-service-wrap">
                 <div className="row no-gutters service-responsive-slider">
-                    {services.map((service) => (
-                        <ServiceCard key={service.id} service={service} />
+                    {services.map((service , index) => (
+                        <ServiceCard className={index === services.length - 1 ? "col-12" : "col-4"} key={service.id} service={service} />
                     ))}
                 </div>
             </div>

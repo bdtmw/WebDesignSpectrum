@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function PrivacyPolicy() {
     return (
-        <section style={{ marginTop: "80px !important", marginBottom: "80px" }} className="main-privacy">
+        <section style={{ marginTop: "80px ", marginBottom: "80px" }} className="main-privacy">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 col-sm-12 col-xs-12 privacy">

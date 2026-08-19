@@ -19,7 +19,7 @@ const WorkDetailSection = ({
                     data-aos="zoom-in"
                     data-aos-duration="1500"
                 >
-                    <h2>{title}</h2>
+                    <h2 style={{marginTop: 10, marginBottom: 10}}>{title}</h2>
 
                     <h3>{subtitle}</h3>
 

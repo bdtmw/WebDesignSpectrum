@@ -31,6 +31,7 @@ export default function ResourceSection({
 
           {title && (
             <h3
+              style={{marginTop: 10, marginBottom: 10 }}
               dangerouslySetInnerHTML={{
                 __html: title,
               }}
