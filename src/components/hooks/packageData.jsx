@@ -7,7 +7,7 @@ export const packageCategories = [
                 id: "website-design-starter",
                 sku: "WEBSITE DESIGN STARTER",
                 title: "Starter Package",
-                price: "$199",
+                price: "$299",
                 features: [
                     "Up to 3 Pages",
                     "Custom Responsive Web Design",

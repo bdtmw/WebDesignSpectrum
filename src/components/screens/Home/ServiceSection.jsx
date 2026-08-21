@@ -44,7 +44,7 @@ const services = [
     },
     {
         id: 6,
-        title: "Seo Media",
+        title: "Search Engine Optimization",
         subtitle: "Marketing",
          desc: 'Grow your audience affordably',
         href: "/social-media-marketing-services-for-small-businesses",
@@ -89,7 +89,7 @@ const ServiceSection = () => {
             <div className="main-service-wrap">
                 <div className="row no-gutters service-responsive-slider">
                     {services.map((service , index) => (
-                        <ServiceCard className={index === services.length - 1 ? "col-12" : "col-4"} key={service.id} service={service} />
+                        <ServiceCard className={index === services.length - 1 ? "col-12" : "col-2"} key={service.id} service={service} />
                     ))}
                 </div>
             </div>
