@@ -19,10 +19,10 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 export const metadata = {
-    title: "Affordable Web Design Services for Small Businesses | Web Design Spectrum",
+    title: "Web Design Wyoming | Wyoming Web Design Company &amp; Agency",
 
     description:
-        "Affordable web design services for small businesses. Professional, mobile-friendly websites from Web Design Spectrum with flexible packages and no hidden fees. Call (307) 218-3240.",
+        "Web Design Spectrum is a Wyoming web design company building custom, mobile-friendly, SEO-ready websites for businesses across the Cowboy State. Call (307) 218-3240",
 
     keywords: [
         "affordable web design services",
