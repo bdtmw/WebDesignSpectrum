@@ -11,6 +11,12 @@ import { Toaster } from "react-hot-toast";
 import Script from "next/script";
 
 
+export const metadata = {
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 const openSans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-open-sans",
