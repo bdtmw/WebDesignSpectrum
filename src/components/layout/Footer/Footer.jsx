@@ -24,8 +24,8 @@ const contactLinks = [
     icon: Mail,
   },
   {
-    label: "Address: 1309 Coffeen Ave. STE 1200, Sheridan, WY 82801",
-    href: "https://maps.google.com/?q=1309+Coffeen+Ave+STE+1200+Sheridan+WY+82801",
+    label: "Address: 2211 RAYFORD RD STE 111, SPRING, TEXAS 77386, USA",
+    href: "https://maps.app.goo.gl/vz8k4mzqfjf89QDa8",
     icon: MapPin,
     external: true,
   },
