@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 
-const ServiceCard = ({ service , className="col" }) => {
+const ServiceCard = ({ service , className="col" , length = 'false' }) => {
     return (
         <div className={className} >
             <div
@@ -12,7 +12,7 @@ const ServiceCard = ({ service , className="col" }) => {
                 data-aos-delay={service.delay}
             >
              
-                <h3 style={{ marginTop: "4%" , marginBottom: "4%"}}>
+                <h3 style={{ marginTop: length ? "1%" : "4%", marginBottom: length ? "1%" : "4%" }}>
                     {service.title}
                     <br />
                     {service.subtitle}

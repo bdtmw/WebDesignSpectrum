@@ -24733,9 +24733,10 @@ li.list_hd {
 }
 
 .main-work-detail {
-  background-image: url("/images/BgImages/HomepageBanner4.jpg");
+  background-color: #f4f3f4;
+  background-image: url("/images/BgImages/bgg-image.png");
   background-size: cover;
-  height: 477px;
+  height: 537px;
 }
 
 .work-detail {
@@ -24776,6 +24777,7 @@ li.list_hd {
 }
 
 .main-industry {
+  background-color: #0000;
   height: 700px;
   padding: 40px 0;
   position: relative;
