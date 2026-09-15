@@ -10,7 +10,8 @@ Here’s a standard Next.js .gitignore:
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
+.next/
+node_modules/
 # testing
 /coverage
 
