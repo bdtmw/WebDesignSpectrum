@@ -2,6 +2,11 @@ import PackageTemplate from "@/components/Template/PackageTemplate";
 import JourneyTemplate from "@/components/Template/JourneyTemplate";
 import ContactTemplate from "@/components/Template/ContactTemplate";
 import DiscountTemplate from "@/components/Template/DiscountTemplate";
+import WebBriefTemplate from "@/components/Template/WebBriefTemplate";
+
+const BRIEF_ALLOWED_EXTENSIONS = ["pdf", "doc", "docx", "txt", "jpg", "jpeg", "png", "webp"];
+// 2 MB file ≈ 2.8 MB once base64 encoded
+const BRIEF_MAX_BASE64_LENGTH = Math.ceil((2 * 1024 * 1024) / 3) * 4;
 
 export async function POST(req) {
   console.log("🔥 /api/contact POST HIT");
@@ -11,8 +16,46 @@ export async function POST(req) {
 
     let subject = "";
     let html = "";
+    let attachments;
 
     switch (body.formType) {
+      case "webBrief": {
+        const file = body.attachment;
+
+        if (file?.fileblob) {
+          const extension = String(file.filename).split(".").pop().toLowerCase();
+
+          if (!BRIEF_ALLOWED_EXTENSIONS.includes(extension)) {
+            return Response.json(
+              { success: false, message: "Please attach a PDF, DOC, DOCX, TXT, JPG, PNG or WebP file." },
+              { status: 400 }
+            );
+          }
+
+          if (file.fileblob.length > BRIEF_MAX_BASE64_LENGTH) {
+            return Response.json(
+              { success: false, message: "Max. file size is 2 MB." },
+              { status: 400 }
+            );
+          }
+
+          const filename = String(file.filename).replace(/[^\w.\-]/g, "_").slice(-100);
+
+          attachments = [
+            {
+              filename,
+              fileblob: file.fileblob,
+              mimetype: file.mimetype || "application/octet-stream",
+            },
+          ];
+          body.attachmentName = filename;
+        }
+
+        subject = `📝 New Website Brief - ${body.businessName || body.name || ""}`;
+        html = WebBriefTemplate(body);
+        break;
+      }
+
       case "contact":
         subject = "📩 New Contact Form";
         html = ContactTemplate(body);
@@ -60,6 +103,8 @@ export async function POST(req) {
           subject,
 
           html_body: html,
+
+          ...(attachments && { attachments }),
         }),
       }
     );

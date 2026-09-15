@@ -1,0 +1,207 @@
+.banner {
+  min-height: 530px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  background: url('/web-brief/banner.png') center / cover no-repeat;
+}
+
+.bannerContent {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.bannerContent h1 {
+  margin: 0 0 25px;
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -3px;
+  color: #bd0011;
+  background: linear-gradient(#e81e27, #a71922, #797979, #c7303c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content {
+  padding: 60px 0;
+  background: linear-gradient(to right, hsl(356deg 74% 38% / 5%), #908f8f1f);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.form {
+  color: #858585;
+}
+
+.section {
+  margin-bottom: 3em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sectionTitle {
+  margin: 0 0 16px;
+  font-size: 35px;
+  font-weight: 700;
+  color: #a71922;
+}
+
+.sectionDescription {
+  white-space: pre-line;
+  line-height: 1.6;
+  padding-bottom: 16px;
+}
+
+.field {
+  margin: 0 0 3em;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: #333;
+}
+
+.required {
+  margin-left: 6px;
+  font-size: 0.8em;
+  font-weight: 400;
+  font-style: italic;
+  color: #c02b0a;
+}
+
+.subLabel {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85em;
+  opacity: 0.75;
+}
+
+.description {
+  margin-top: 8px;
+  padding: 6px 8px;
+  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7em 0.05em;
+  font: inherit;
+  color: #333;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #919191;
+  border-radius: 0;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.input:focus,
+.textarea:focus {
+  border-bottom-color: #a71922;
+}
+
+.input::placeholder {
+  color: rgba(191, 191, 191, 0.8);
+}
+
+.file {
+  font: inherit;
+}
+
+.radios {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.radio input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #a71922;
+}
+
+.footer {
+  text-align: center;
+}
+
+.button {
+  min-width: 210px;
+  padding: 12px;
+  font: inherit;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  background: #a71922;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.6s ease;
+}
+
+.button:hover:not(:disabled) {
+  background: #1e2b3d;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.notice {
+  margin-top: 20px;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 991px) {
+  .bannerContent h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    min-height: 320px;
+  }
+
+  .bannerContent h1 {
+    font-size: 35px;
+    line-height: 40px;
+    letter-spacing: -1px;
+  }
+
+  .sectionTitle {
+    font-size: 26px;
+  }
+}
