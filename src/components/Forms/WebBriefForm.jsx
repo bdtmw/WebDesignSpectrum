@@ -271,7 +271,7 @@ const WebBriefForm = () => {
 
             <YesNo
                 name="needsHosting"
-                label="Do you want us to provide server hosting for your website?"
+                label="Do you want us to provide web server for your website?"
                 register={register}
                 error={errors.needsHosting}
             />
