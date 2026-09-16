@@ -258,7 +258,7 @@ const WebBriefForm = () => {
             {/* ===== Domain and Web Hosting Details ===== */}
             <div className="wb-section-head wb-section-head--spaced">
                 <h3>
-                    Domain and <span>Web Hosting Details</span>
+                    Domain and <span>Web Server Details</span>
                 </h3>
             </div>
 
