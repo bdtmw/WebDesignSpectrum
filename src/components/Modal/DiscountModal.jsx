@@ -25,15 +25,15 @@ const DiscountModal = ({ isOpen, onClose }) => {
                 </button>
 
                 <div className="wds-pop-offer">
-                    <span className="wds-pop-badge">Limited Time</span>
+                    <span className="wds-pop-badge">GET STARTED</span>
 
                     <div style={{ 
                             lineHeight: "36px"
-                    }} className="wds-pop-off"> Save 50% <br />
-                        on Your First Website</div>
+                    }} className="wds-pop-off"> Build a Website <br />
+                        That Grows Your Business</div>
 
                     <p className="wds-pop-sub">
-                        Build a website that attracts customers and grows your business.
+                        Build a professional website that attracts customers and helps your business grow.
                     </p>
 
                     <p className="wds-pop-sub">
@@ -50,11 +50,10 @@ const DiscountModal = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className="wds-pop-form">
-                    <h3 id="wds-pop-title">Claim Your 50% Discount</h3>
+                    <h3 id="wds-pop-title">Get Your Free Quote</h3>
 
                     <p className="wds-pop-lead">
-                        Drop your details and we'll send your quote with the discount
-                        applied. No obligation.
+                        Tell us about your project and we'll get back to you with a personalized quote. No obligation.
                     </p>
 
                     <DicountForm/>
@@ -65,8 +64,7 @@ const DiscountModal = ({ isOpen, onClose }) => {
                         <h3>You're in!</h3>
 
                         <p className="wds-pop-lead">
-                            Your 50% discount is reserved. We'll be in touch shortly with
-                            your quote.
+                            By submitting, you agree to be contacted about your project and quote. We never share your details. Reply STOP to opt out of texts.
                         </p>
 
                         <button className="wds-pop-btn" onClick={onClose}>
