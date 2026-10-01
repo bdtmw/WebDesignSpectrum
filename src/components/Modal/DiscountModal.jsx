@@ -29,8 +29,8 @@ const DiscountModal = ({ isOpen, onClose }) => {
 
                     <div style={{ 
                             lineHeight: "36px"
-                    }} className="wds-pop-off"> Build a Website <br />
-                        That Grows Your Business</div>
+                    }} className="wds-pop-off"> Build Your First  <br />
+                        Website With Us</div>
 
                     <p className="wds-pop-sub">
                         Build a professional website that attracts customers and helps your business grow.
