@@ -161,7 +161,7 @@ const DicountForm = () => {
             >
                 {isSubmitting
                     ? "Submitting..."
-                    : "Get My 50% Discount"}
+                    : "Get My Free Quote"}
             </button>
 
             <p className="wds-pop-fine">
