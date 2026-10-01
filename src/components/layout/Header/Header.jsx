@@ -315,7 +315,7 @@ const Header = () => {
                   onClick={() => setIsDiscountOpen(true)}
                   data-bs-target="#discountModal"
                 >
-                  GET <span>50% DISCOUNT</span>
+                  GET <span> Started</span>
                 </button>
 
                 <div className="navicon">
