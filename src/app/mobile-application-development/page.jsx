@@ -1,3 +1,4 @@
+import { breadcrumbSchema } from "@/lib/seo";
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -18,7 +19,7 @@ import ServiceDetailSection from '@/components/screens/Services/ServiceDetailSec
 
 
 export const metadata = {
-    title: "Mobile Application Development Services | Custom & Cross-Platform App Development",
+    title: "Mobile Application Development Services",
 
     description:
         "Mobile application development services from Web Design Spectrum. Custom, cross-platform and hybrid app development for iOS and Android, built to perform. Call (307) 218-3240.",
@@ -116,6 +117,14 @@ const faqSchema = {
 const Page = () => {
     return (
         <>
+            <Script
+                id="breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbSchema("Mobile Application Development", "/mobile-application-development")),
+                }}
+            />
+
             <Script
                 id="service-schema"
                 type="application/ld+json"

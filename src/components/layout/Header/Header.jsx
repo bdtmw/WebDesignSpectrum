@@ -281,7 +281,9 @@ const Header = () => {
                 <img
                   className="img-fluid"
                   src="/images/headerLogo.png"
-                  alt="Logo"
+                  alt="Web Design Spectrum logo"
+                  width={1096}
+                  height={275}
                 />
               </Link>
 
@@ -346,7 +348,9 @@ const Header = () => {
             <img
               className="img-fluid"
               src="/images/Logo.png"
-              alt="Logo"
+              alt="Web Design Spectrum logo"
+              width={1096}
+              height={275}
             />
           </Link>
 

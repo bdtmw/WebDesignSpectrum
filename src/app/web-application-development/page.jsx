@@ -1,3 +1,4 @@
+import { breadcrumbSchema } from "@/lib/seo";
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -20,7 +21,7 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 export const metadata = {
-    title: "Web Application Development Services | Web App Development Company",
+    title: "Web Application Development Services | Web Design Spectrum",
 
     description:
         "Web application development services from Web Design Spectrum. Custom web apps, SaaS platforms, portals and dashboards built with React, Laravel and Node. Call (307) 218-3240.",
@@ -105,6 +106,14 @@ const faqSchema = {
 const page = () => {
     return (
         <>
+
+            <Script
+                id="breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbSchema("Web Application Development", "/web-application-development")),
+                }}
+            />
 
             <Script
                 id="service-schema"

@@ -61,7 +61,7 @@ const HeroSection = () => {
 
               <Image
                 src="/images/Mockups/social-logo.webp"
-                alt="Social Logos"
+                alt="Social media platforms we market on"
                 width={400}
                 height={80}
                 className="img-fluid"
@@ -72,7 +72,7 @@ const HeroSection = () => {
           <div className="col-lg-6 col-sm-12 banner-img">
             <Image
               src="/images/Mockups/banner-side.webp"
-              alt="Banner"
+              alt="Website design mockups on desktop and mobile"
               width={700}
               height={600}
               className="img-fluid"

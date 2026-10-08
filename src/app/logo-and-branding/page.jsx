@@ -1,3 +1,4 @@
+import { breadcrumbSchema } from "@/lib/seo";
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -19,7 +20,7 @@ import ServiceDetailSection from '@/components/screens/Services/ServiceDetailSec
 
 
 export const metadata = {
-    title: "Logo and Branding Services | Logo Design and Branding Agency",
+    title: "Logo and Branding Services | Web Design Spectrum",
 
     description:
         "Logo and branding services from Web Design Spectrum. Custom logo design, brand identity, style guides and rebrands that make your business unforgettable. Call (307) 218-3240.",
@@ -104,6 +105,14 @@ const faqSchema = {
 const Page = () => {
     return (
         <>
+
+            <Script
+                id="breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbSchema("Logo and Branding", "/logo-and-branding")),
+                }}
+            />
 
             <Script
                 id="service-schema"

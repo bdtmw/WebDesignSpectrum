@@ -106,7 +106,7 @@ const AppPortfolio = () => {
                                                     <span className="icon">
                                                         <Image
                                                             src="/images/Mockups/dwn-icon.jpg"
-                                                            alt="icon"
+                                                            alt="App feature icon"
                                                             width={50}
                                                             height={50}
                                                             className="img-fluid"
@@ -124,7 +124,7 @@ const AppPortfolio = () => {
                                                     <span className="icon">
                                                         <Image
                                                             src="/images/Mockups/usr-icon.jpg"
-                                                            alt="icon"
+                                                            alt="App feature icon"
                                                             width={50}
                                                             height={50}
                                                             className="img-fluid"
@@ -142,7 +142,7 @@ const AppPortfolio = () => {
                                                     <span className="icon">
                                                         <Image
                                                             src="/images/Mockups/fund-icon.jpg"
-                                                            alt="icon"
+                                                            alt="App feature icon"
                                                             width={50}
                                                             height={50}
                                                             className="img-fluid"
@@ -167,7 +167,7 @@ const AppPortfolio = () => {
                                                 >
                                                     <Image
                                                         src="/images/Mockups/playstore-2.jpg"
-                                                        alt="playstore"
+                                                        alt="Get it on Google Play"
                                                         width={200}
                                                         height={60}
                                                         className="img-fluid"
@@ -184,7 +184,7 @@ const AppPortfolio = () => {
                                                 >
                                                     <Image
                                                         src="/images/Mockups/appstore-2.jpg"
-                                                        alt="appstore"
+                                                        alt="Download on the App Store"
                                                         width={200}
                                                         height={60}
                                                         className="img-fluid"
@@ -207,7 +207,7 @@ const AppPortfolio = () => {
                                 <div id="tab-1" className="img bg-img d-flex">
                                     <Image
                                         src="/images/Mockups/early_learning_mob.jpg"
-                                        alt="early learning"
+                                        alt="Early learning mobile app screens"
                                         width={700}
                                         height={700}
                                         className="img-xs-hide hide-md left-mobile-app"

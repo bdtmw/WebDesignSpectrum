@@ -1,3 +1,4 @@
+import { breadcrumbSchema } from "@/lib/seo";
 import { websitePortfolio } from '@/components/hooks/Portfolio'
 import PortfolioSection from '@/components/screens/Home/PortfolioSection'
 import WorkDetailSection from '@/components/screens/Home/WorkDetailSection'
@@ -19,7 +20,7 @@ import React from 'react'
 
 
 export const metadata = {
-    title: "Ecommerce Web Development Services | Ecommerce Development Agency",
+    title: "Ecommerce Web Development Services | Web Design Spectrum",
 
     description:
         "Web Design Spectrum is an ecommerce web development agency offering full-service ecommerce web development services — Shopify, WooCommerce, Magento & custom builds. Call (307) 218-3240.",
@@ -102,6 +103,14 @@ const faqSchema = {
 const Page = () => {
     return (
         <>
+
+            <Script
+                id="breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbSchema("Ecommerce Web Development", "/ecommerce-web-development")),
+                }}
+            />
 
             <Script
                 id="service-schema"

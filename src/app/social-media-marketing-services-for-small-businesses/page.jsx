@@ -1,3 +1,4 @@
+import { breadcrumbSchema } from "@/lib/seo";
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -19,7 +20,7 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 export const metadata = {
-    title: "Social Media Marketing Services for Small Businesses | Web Design Spectrum",
+    title: "Social Media Marketing Services for Small Businesses",
 
     description:
         "Affordable social media marketing services for small businesses. Web Design Spectrum manages your content, ads and community across every platform. Call (307) 218-3240.",
@@ -111,6 +112,14 @@ const faqSchema = {
 const page = () => {
     return (
         <>
+            <Script
+                id="breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbSchema("Social Media Marketing", "/social-media-marketing-services-for-small-businesses")),
+                }}
+            />
+
             <Script
                 id="service-schema"
                 type="application/ld+json"

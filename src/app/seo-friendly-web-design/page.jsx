@@ -1,3 +1,4 @@
+import { breadcrumbSchema } from "@/lib/seo";
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -19,7 +20,7 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 export const metadata = {
-    title: "SEO Friendly Web Design Service | SEO Friendly Web Design Company",
+    title: "SEO Friendly Web Design Service | Web Design Spectrum",
 
     description:
         "An SEO friendly web design service from Web Design Spectrum. We build fast, search-optimized websites engineered to rank on Google from day one. Call (307) 218-3240.",
@@ -104,6 +105,14 @@ const page = () => {
     return (
 
         <>
+            <Script
+                id="breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbSchema("SEO Friendly Web Design", "/seo-friendly-web-design")),
+                }}
+            />
+
             <Script
                 id="service-schema"
                 type="application/ld+json"

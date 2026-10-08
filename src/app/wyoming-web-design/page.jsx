@@ -1,3 +1,4 @@
+import { breadcrumbSchema } from "@/lib/seo";
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -103,6 +104,14 @@ const StaticWebsite = () => {
     return (
 
         <>
+
+            <Script
+                id="breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbSchema("Wyoming Web Design", "/wyoming-web-design")),
+                }}
+            />
 
             <Script
                 id="service-schema"

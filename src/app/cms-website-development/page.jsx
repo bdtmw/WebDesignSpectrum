@@ -1,3 +1,4 @@
+import { breadcrumbSchema } from "@/lib/seo";
 import React from 'react'
 import FaqSection from '@/components/sections/FaqSection'
 import BannerSection from '@/components/sections/BannerSection'
@@ -19,7 +20,7 @@ import Script from 'next/script'
 
 
 export const metadata = {
-    title: "CMS Website Development Services | Custom CMS Development Company",
+    title: "CMS Website Development Services | Web Design Spectrum",
 
     description:
         "CMS website development services from Web Design Spectrum. Custom WordPress, headless and bespoke CMS builds that let you manage your own content. Call (307) 218-3240.",
@@ -103,6 +104,14 @@ const Page = () => {
     return (
 
         <>
+            <Script
+                id="breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbSchema("CMS Website Development", "/cms-website-development")),
+                }}
+            />
+
             <Script
                 id="service-schema"
                 type="application/ld+json"

@@ -25,7 +25,7 @@ const ContactIntroSection = () => {
         <div className="contact-img">
           <Image
             src="/images/webp/contact-img.webp"
-            alt="Contact"
+            alt="Contact the Web Design Spectrum team"
             width={1200}
             height={600}
             className="img-fluid"
