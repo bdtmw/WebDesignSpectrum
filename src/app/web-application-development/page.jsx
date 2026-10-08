@@ -1,4 +1,4 @@
-import { breadcrumbSchema } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema as buildFaqSchema } from "@/lib/seo";
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -61,44 +61,7 @@ const serviceSchema = {
         "Custom web application development services: SaaS platforms, portals, dashboards and progressive web apps.",
 };
 
-const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-        {
-            "@type": "Question",
-            name: "What is the difference between a website and a web application?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "A website mainly presents information, while a web application lets users perform tasks: logging in, entering data, running workflows and interacting in real time. If your idea involves user accounts, dashboards or business logic, you need a web application rather than a website.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "How long does it take to build a web application?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "It depends on scope. A focused MVP can launch in a few weeks, while a full SaaS platform typically runs a few months. We break every project into milestones so you see working software early and often.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Which technologies do you build web applications with?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "We build with modern, well-supported stacks such as React and Next.js on the front end and Laravel, Node.js or Python on the back end. We choose the stack based on your requirements, not a one-size-fits-all default.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Can you take over or fix an existing web app?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes. We regularly take over unfinished or poorly built web applications, audit the codebase, stabilise it and continue development or rebuild the weak parts, so you can move forward without starting from scratch.",
-            },
-        },
-    ],
-};
+const faqSchema = buildFaqSchema(webApplicationDevelopment.faq);
 
 
 

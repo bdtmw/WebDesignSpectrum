@@ -1,4 +1,4 @@
-import { breadcrumbSchema } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema as buildFaqSchema } from "@/lib/seo";
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -64,48 +64,7 @@ const serviceSchema = {
         "Social media marketing services for small businesses: content creation, advertising and community management across every platform.",
 };
 
-const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-        {
-            "@type": "Question",
-            name: "How much does social media marketing cost for a small business?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text:
-                    "Our small business packages start affordably and scale with the number of platforms, posts and ad management you need. You get a fixed monthly price before we start, with no long lock-in contracts and no hidden fees.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Which social media platforms should my small business be on?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text:
-                    "You do not need to be everywhere — you need to be where your customers are. During onboarding we identify the two or three platforms that fit your audience and goals, so your budget goes into the channels that actually bring in business.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "How long before I see results from social media marketing?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text:
-                    "Paid ads can drive traffic and leads within days, while organic growth in followers and engagement builds over a few months of consistent posting. We report on both so you can see progress from the first month.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Do I have to sign a long-term contract?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text:
-                    "No. We work on flexible monthly plans because we would rather earn your business with results than lock you in. You can adjust or pause your package as your needs change.",
-            },
-        },
-    ],
-};
+const faqSchema = buildFaqSchema(socialMediaMarketing.faq);
 
 
 

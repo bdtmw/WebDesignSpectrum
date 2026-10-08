@@ -1,4 +1,4 @@
-import { breadcrumbSchema } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema as buildFaqSchema } from "@/lib/seo";
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -60,44 +60,7 @@ const serviceSchema = {
         "Logo and branding services: custom logo design, brand identity systems, style guides and rebranding.",
 };
 
-const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-        {
-            "@type": "Question",
-            name: "What is the difference between a logo and branding?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "A logo is a single mark that identifies your business. Branding is the complete identity around it: your colours, fonts, imagery, tone and the consistent way it all comes together. A logo is one piece of your brand, and the strongest logos are designed as part of a wider identity system.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "How long does logo and branding design take?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "A logo alone typically takes one to two weeks, while a full brand identity with a style guide runs a few weeks depending on scope. We share a clear timeline and milestones at the start so you always know what to expect.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "What files do I receive with my logo?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "You receive full ownership and a complete file pack: vector formats for print and scaling, web-ready versions, colour and black-and-white variations, and everything you need to use your logo anywhere. Your brand is yours to keep.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Can you rebrand or refresh my existing business?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes. Rebranding is a core part of what we do. Whether you need a light refresh or a complete new identity, we evolve your brand thoughtfully so it feels current while keeping the equity you have already built.",
-            },
-        },
-    ],
-};
+const faqSchema = buildFaqSchema(logoBrandingDevelopment.faq);
 
 
 

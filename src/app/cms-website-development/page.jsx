@@ -1,4 +1,4 @@
-import { breadcrumbSchema } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema as buildFaqSchema } from "@/lib/seo";
 import React from 'react'
 import FaqSection from '@/components/sections/FaqSection'
 import BannerSection from '@/components/sections/BannerSection'
@@ -60,44 +60,7 @@ const serviceSchema = {
         "CMS website development services: custom WordPress, headless and bespoke content management system builds.",
 };
 
-const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-        {
-            "@type": "Question",
-            name: "What is a CMS and do I need one?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "A CMS, or content management system, lets you update your website's text, images, pages and blog yourself without touching code. If your content changes even occasionally, a CMS pays for itself by removing your reliance on a developer for every edit.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Which CMS platform is best for my business?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "It depends on your needs. WordPress suits most businesses, headless CMS platforms suit fast or multi-channel sites, and a custom CMS suits unusual workflows. We recommend the right fit during discovery rather than defaulting to one platform.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Can you migrate my existing website to a CMS?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes. We migrate static or legacy sites onto a modern CMS, transferring your content and preserving your SEO with proper redirects, so you keep your rankings while gaining full control of your content.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Will I be able to update the site myself?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Absolutely. That is the whole point of a CMS. We build an intuitive admin dashboard and hand over training and documentation so you can add pages, edit content and publish posts confidently on your own.",
-            },
-        },
-    ],
-};
+const faqSchema = buildFaqSchema(cmsWebsiteDevelopment.faq);
 
 
 const Page = () => {

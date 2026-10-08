@@ -1,4 +1,4 @@
-import { breadcrumbSchema } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema as buildFaqSchema } from "@/lib/seo";
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -67,52 +67,7 @@ const serviceSchema = {
     description:
         "Mobile application development services: custom, cross-platform and hybrid app development for iOS and Android.",
 };
-const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-
-    mainEntity: [
-        {
-            "@type": "Question",
-            name: "How much does mobile application development cost?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text:
-                    "It depends on scope and platforms. A focused single-platform MVP costs far less than a feature-rich app on both iOS and Android. Cross-platform development often reduces cost by building once for both. We provide a fixed quote after discovery so you always know the number up front.",
-            },
-        },
-
-        {
-            "@type": "Question",
-            name: "Should I build a native, cross-platform or hybrid app?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text:
-                    "It depends on your goals and budget. Native gives maximum performance per platform; cross-platform builds one codebase for both iOS and Android to save time and cost; hybrid is fastest for simpler apps. We recommend the right approach during discovery rather than defaulting to one.",
-            },
-        },
-
-        {
-            "@type": "Question",
-            name: "Do you develop for both iOS and Android?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text:
-                    "Yes. We build for both platforms. With cross-platform and hybrid development we can deliver a single app that runs natively on iOS and Android from one codebase, or build fully native apps for each platform when performance demands it.",
-            },
-        },
-
-        {
-            "@type": "Question",
-            name: "Do you help publish the app to the App Store and Google Play?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text:
-                    "Yes. We handle the full submission process for both the Apple App Store and Google Play, including store listings and compliance, and support you after launch with updates and maintenance.",
-            },
-        },
-    ],
-};
+const faqSchema = buildFaqSchema(mobileApplicationDevelopment.faq);
 
 const Page = () => {
     return (

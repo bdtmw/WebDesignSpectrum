@@ -1,4 +1,4 @@
-import { breadcrumbSchema } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema as buildFaqSchema } from "@/lib/seo";
 import { websitePortfolio } from '@/components/hooks/Portfolio'
 import PortfolioSection from '@/components/screens/Home/PortfolioSection'
 import WorkDetailSection from '@/components/screens/Home/WorkDetailSection'
@@ -60,44 +60,7 @@ const serviceSchema = {
         "Full-service ecommerce web development services: Shopify, WooCommerce, Magento and custom-built online stores.",
 };
 
-const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-        {
-            "@type": "Question",
-            name: "How much does ecommerce web development cost?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "It depends on scope: a lean Shopify launch costs far less than a custom multi-vendor marketplace. We publish package pricing and provide fixed quotes after discovery, so you always know the number before work begins.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "How long does it take to build an online store?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Simple stores can launch in a few weeks; complex custom builds typically run two to four months. Your project plan includes a milestone schedule from day one.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Which ecommerce platform is best for my business?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "There is no universal answer, which is why platform selection is part of our discovery phase. We recommend based on your catalog size, budget, integrations and growth plans.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Can you fix or redesign my existing store?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes. Redesigns, rescues and replatforming projects are a core part of our ecommerce web development services, and we handle data migration and SEO preservation as standard.",
-            },
-        },
-    ],
-};
+const faqSchema = buildFaqSchema(ecommerceWebsiteDevelopment.faq);
 
 
 const Page = () => {
