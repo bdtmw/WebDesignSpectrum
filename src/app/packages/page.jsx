@@ -1,3 +1,4 @@
+import { breadcrumbSchema } from "@/lib/seo";
 import React from 'react'
 import BannerSection from '@/components/sections/BannerSection'
 import PackageSection from '@/components/screens/Package/PackageSection'
@@ -20,6 +21,7 @@ const page = () => {
     return (
         <>
             <div>
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema("Packages", "/packages")) }} />
                 <BannerSection title={'Business Owner'} description={"Our team of expert web designers has meticulously crafted cost-effective packages to suit businesses of all sizes. Whether you're a startup or an established enterprise, our affordable offerings ensure you receive high-quality web design services without breaking the bank."} minititle={'Affordable Solutions for Every'}></BannerSection>
 
                 <PackageSection />

@@ -1,3 +1,4 @@
+import { breadcrumbSchema } from "@/lib/seo";
 import AboutBanner from '@/components/screens/AboutUs/AboutBanner'
 import ExpertiseSection from '@/components/screens/AboutUs/ExpertiseSection'
 import InnerAboutSection from '@/components/screens/AboutUs/InnerAboutSection'
@@ -28,6 +29,7 @@ export const metadata = {
 const page = () => {
   return (
     <div>
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema("About Us", "/about-us")) }} />
 
       <BannerSection title={'We Craft Designs  With Flawless Pixels'} bannerPoints={bannerPoints}  minititle={'Innovative Collective of Creative Minds'}></BannerSection>
 

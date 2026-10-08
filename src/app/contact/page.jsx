@@ -1,3 +1,4 @@
+import { breadcrumbSchema } from "@/lib/seo";
 import ContactBanner from '@/components/screens/ContactUs/ContactBanner'
 import ContactIntroSection from '@/components/screens/ContactUs/ContactIntroSection'
 import BannerSection from '@/components/sections/BannerSection'
@@ -18,6 +19,7 @@ export const metadata = {
 const page = () => {
   return (
     <div>
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema("Contact Us", "/contact")) }} />
 
       <BannerSection title={'Connect With Us'} description={"Expand your global reach and showcase your products and services with the expert support of Web Design Spectrum."} minititle={'Leading Web Design Agency'}></BannerSection>
 

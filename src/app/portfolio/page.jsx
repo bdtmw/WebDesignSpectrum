@@ -1,3 +1,4 @@
+import { breadcrumbSchema } from "@/lib/seo";
 import React from 'react'
 import BannerSection from '@/components/sections/BannerSection'
 import PortfolioSection from '@/components/screens/Home/PortfolioSection'
@@ -47,6 +48,7 @@ const portfolioTabs = [
 const portfolio = () => {
     return (
         <div>
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema("Portfolio", "/portfolio")) }} />
 
             <BannerSection title={'Complemented by Strategic Advertising'} description={"In our pursuit of the title of best quality design, we strive to provide an excellent initial impression."} minititle={'User-Centric Website Layouts'}></BannerSection>
             <PortfolioSection
