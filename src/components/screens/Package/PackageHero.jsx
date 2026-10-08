@@ -20,9 +20,9 @@ const PackageBanner = () => {
             >
               <h4>Affordable Solutions for Every</h4>
 
-              <h2>
+              <h1>
                 <span>Business Owner</span>
-              </h2>
+              </h1>
 
               <p>
                 Our team of expert web designers has meticulously crafted
@@ -50,4 +50,4 @@ const PackageBanner = () => {
   );
 };
 
-export default PackageBanner;
+export default PackageBanner;

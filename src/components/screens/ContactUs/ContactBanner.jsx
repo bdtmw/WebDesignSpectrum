@@ -18,9 +18,9 @@ const ContactBanner = () => {
                         >
                             <h4>Leading Web Design Agency</h4>
 
-                            <h2>
+                            <h1>
                                 <span>Connect With Us</span>
-                            </h2>
+                            </h1>
 
                             <p>
                                 Expand your global reach and showcase your products and
@@ -34,4 +34,4 @@ const ContactBanner = () => {
     );
 };
 
-export default ContactBanner;
+export default ContactBanner;

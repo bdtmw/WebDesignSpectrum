@@ -36,15 +36,15 @@ const HeroSection = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              <h1 style={{color: 'white' , fontSize: 16 , fontWeight: 500}}>Affordable Web Design for Small Businesses</h1>
+              <h4>Affordable Web Design for Small Businesses</h4>
 
-              <h2>
+              <h1>
                 Affordable  
                 <span style={{marginLeft: 12}}>
                    Web Design <br />
                   Small Businesses Trust to Grow
                 </span>
-              </h2>
+              </h1>
 
               <p>A professional website your small business can actually afford, with your brand and budget always our top priority.
               </p>
@@ -91,4 +91,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HeroSection;

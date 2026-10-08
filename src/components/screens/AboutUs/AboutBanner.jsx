@@ -26,13 +26,13 @@ const AboutBanner = () => {
             >
               <h4>Innovative Collective of Creative Minds</h4>
 
-              <h2>
+              <h1>
                 <span>
                   We Craft Designs
                   <br />
                   With Flawless Pixels
                 </span>
-              </h2>
+              </h1>
 
               <ul>
                 {bannerPoints.map((point, index) => (
@@ -66,4 +66,4 @@ const AboutBanner = () => {
   );
 };
 
-export default AboutBanner;
+export default AboutBanner;

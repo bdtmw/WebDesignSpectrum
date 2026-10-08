@@ -5,6 +5,15 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 import Image from 'next/image'
 import React from 'react'
 
+export const metadata = {
+    title: "App Development Portfolio | Web Design Spectrum",
+    description:
+        "Browse mobile and web app projects built by Web Design Spectrum: custom iOS, Android and web applications delivered for growing businesses.",
+    alternates: {
+        canonical: "https://webdesignspectrum.com/app-portfolio",
+    },
+};
+
 
 const portfolioData = {
     website: websitePortfolio,
