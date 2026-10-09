@@ -21,9 +21,9 @@ const BannerSection = ({ title, description, minititle, bannerPoints }) => {
             >
               <h4>{minititle}</h4>
 
-              <h2>
+              <h1>
                 <span>{title}</span>
-              </h2>
+              </h1>
 
               {
                 description && <p>
@@ -56,4 +56,4 @@ const BannerSection = ({ title, description, minititle, bannerPoints }) => {
   );
 };
 
-export default BannerSection;
+export default BannerSection;

@@ -12,9 +12,40 @@ import Script from "next/script";
 
 
 export const metadata = {
+  metadataBase: new URL("https://webdesignspectrum.com"),
+  title: {
+    default: "Web Design Spectrum | Affordable Web Design Services",
+    template: "%s",
+  },
+  applicationName: "Web Design Spectrum",
   icons: {
     icon: "/favicon.ico",
   },
+  openGraph: {
+    type: "website",
+    siteName: "Web Design Spectrum",
+    locale: "en_US",
+    images: [{ url: "/images/BgImages/HeroMainImage.jpg", alt: "Web Design Spectrum" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Web Design Spectrum",
+  url: "https://webdesignspectrum.com/",
+  logo: "https://webdesignspectrum.com/images/Logo.png",
+  email: "info@webdesignspectrum.com",
+  telephone: "+13072183240",
+  sameAs: ["https://www.facebook.com/webdesigntech"],
 };
 
 const openSans = Open_Sans({
@@ -38,6 +69,10 @@ export default function RootLayout({ children }) {
       className={`${openSans.variable} ${poppins.variable}`}
     >
       <head>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+    />
     <Script
     src="https://www.googletagmanager.com/gtag/js?id=G-7157JGNQ3C"
     strategy="afterInteractive"

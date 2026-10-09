@@ -1,3 +1,4 @@
+import { breadcrumbSchema, faqSchema as buildFaqSchema } from "@/lib/seo";
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -19,7 +20,7 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 export const metadata = {
-    title: "SEO Friendly Web Design Service | SEO Friendly Web Design Company",
+    title: "SEO Friendly Web Design Service | Web Design Spectrum",
 
     description:
         "An SEO friendly web design service from Web Design Spectrum. We build fast, search-optimized websites engineered to rank on Google from day one. Call (307) 218-3240.",
@@ -59,44 +60,7 @@ const serviceSchema = {
         "SEO friendly web design service building fast, search-optimized websites engineered to rank.",
 };
 
-const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-        {
-            "@type": "Question",
-            name: "What makes a website SEO friendly?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "An SEO friendly website is built so search engines can easily crawl, understand and rank it: fast load times, clean semantic code, a logical structure, mobile-first design, proper heading and metadata, structured data and optimized content. We build these in from the first line of code rather than bolting them on later.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Is SEO friendly web design the same as an SEO campaign?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "They work together but are not the same. SEO friendly web design builds the technical and on-page foundation so your site can rank. An ongoing SEO campaign then adds content, links and refinement over time. A site without the foundation makes every later campaign harder and more expensive.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Will an SEO friendly website guarantee first-page rankings?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "No honest company can guarantee a specific ranking, because Google controls the results. What we guarantee is a site built to every technical SEO best practice, giving you the strongest possible foundation to compete and rank for your target terms.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Can you make my existing website more SEO friendly?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes. We audit your current site for technical and on-page SEO issues, then fix or rebuild what is holding you back, improving speed, structure, code and content while preserving the rankings you already have.",
-            },
-        },
-    ],
-};
+const faqSchema = buildFaqSchema(seoFriendlyWebDesign.faq);
 
 
 
@@ -104,6 +68,14 @@ const page = () => {
     return (
 
         <>
+            <Script
+                id="breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbSchema("SEO Friendly Web Design", "/seo-friendly-web-design")),
+                }}
+            />
+
             <Script
                 id="service-schema"
                 type="application/ld+json"

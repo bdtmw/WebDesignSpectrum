@@ -13,7 +13,7 @@ import { animationPortfolio, logoDesigns, marketingPortfolio, websitePortfolio }
 
 
 export const metadata = {
-  title: "Affordable Web Design Services for Small Businesses | Web Design Spectrum",
+  title: "Affordable Web Design Services | Web Design Spectrum",
 
   description:
     "Affordable web design services for small businesses. Professional, mobile-friendly websites from Web Design Spectrum with flexible packages and no hidden fees. Call (307) 218-3240.",

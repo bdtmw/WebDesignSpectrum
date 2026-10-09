@@ -2,8 +2,10 @@ export default function robots() {
   return {
     rules: {
       userAgent: "*",
-      disallow: "",
+      allow: "/",
+      disallow: ["/api/", "/web-brief"],
     },
-    sitemap: "https://www.webdesignspectrum.com/",
+    sitemap: "https://webdesignspectrum.com/sitemap.xml",
+    host: "https://webdesignspectrum.com",
   };
 }

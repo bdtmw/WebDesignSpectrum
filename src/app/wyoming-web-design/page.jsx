@@ -1,3 +1,4 @@
+import { breadcrumbSchema, faqSchema as buildFaqSchema } from "@/lib/seo";
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -19,17 +20,17 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 export const metadata = {
-    title: "Web Design Wyoming | Wyoming Web Design Company &amp; Agency",
+    title: "Web Design Wyoming | Wyoming Web Design Company & Agency",
 
     description:
         "Web Design Spectrum is a Wyoming web design company building custom, mobile-friendly, SEO-ready websites for businesses across the Cowboy State. Call (307) 218-3240",
 
     keywords: [
-        "affordable web design services",
-        "affordable web design for small businesses",
-        "cheap web design small business",
-        "budget website design",
-        "small business web design company",
+        "web design wyoming",
+        "wyoming web design company",
+        "wyoming web design agency",
+        "website design wyoming",
+        "sheridan wyoming web design",
     ],
 
     alternates: {
@@ -59,50 +60,21 @@ const serviceSchema = {
         "Affordable web design services and website packages for small businesses.",
 };
 
-const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-        {
-            "@type": "Question",
-            name: "How much does affordable web design for a small business cost?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Our small business packages start low and scale with what you need. A clean multi-page brochure site costs far less than a store or booking system. You get a fixed quote before any work begins, with no hidden fees.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Does affordable mean low quality?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "No. Affordable means we scope tightly to what your business actually needs and reuse a proven, efficient process. You still get a custom, mobile-friendly, SEO-ready website built by our in-house team.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "How long does a small business website take?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Most small business sites launch in one to three weeks depending on page count and content readiness. We give you a milestone schedule up front.",
-            },
-        },
-        {
-            "@type": "Question",
-            name: "Do you offer payment in installments?",
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes. We break projects into milestones so you pay as the work progresses rather than everything up front, which keeps the investment manageable for small budgets.",
-            },
-        },
-    ],
-};
+const faqSchema = buildFaqSchema(affordableWebDesign.faq);
 
 
 const StaticWebsite = () => {
     return (
 
         <>
+
+            <Script
+                id="breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(breadcrumbSchema("Wyoming Web Design", "/wyoming-web-design")),
+                }}
+            />
 
             <Script
                 id="service-schema"

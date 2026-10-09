@@ -28084,14 +28084,14 @@ ul#parent {
     right: 75px
 }
 
-.banner-text h2 {
+.banner-text h2, .banner-text h1 {
     color: var(--color-white);
     font-size: 46px;
     padding: 6px 0 12px;
     font-weight: 400
 }
 
-.banner-text h2 span {
+.banner-text h2 span, .banner-text h1 span {
     font-weight: 700;
     font-family: Poppins, sans-serif
 }
@@ -29535,7 +29535,7 @@ li.list_hd {
     overflow: hidden
 }
 
-.inner-banner .banner-text h2 {
+.inner-banner .banner-text h2, .inner-banner .banner-text h1 {
     padding: 6px 0 17px
 }
 
@@ -30369,7 +30369,7 @@ li.list_hd {
     }
 }
 
-.detail_title .banner-text h2 {
+.detail_title .banner-text h2, .detail_title .banner-text h1 {
     font-size: 37px;
     font-weight: 700
 }
@@ -30713,7 +30713,7 @@ li.list_hd {
         font-size: 13px
     }
 
-    .banner-text h2 {
+    .banner-text h2, .banner-text h1 {
         font-size: 37px
     }
 
@@ -31303,7 +31303,7 @@ li.list_hd {
         max-width: 456px
     }
 
-    .detail_title .banner-text h2 {
+    .detail_title .banner-text h2, .detail_title .banner-text h1 {
         font-size: 16px
     }
 
@@ -31559,7 +31559,7 @@ li.list_hd {
 }
 
 @media screen and (max-width:414px) {
-    .banner-text h2 {
+    .banner-text h2, .banner-text h1 {
         font-size: 26px
     }
 
@@ -31705,7 +31705,7 @@ li.list_hd {
         padding: 11px 25px
     }
 
-    .detail_title .banner-text h2 {
+    .detail_title .banner-text h2, .detail_title .banner-text h1 {
         font-size: 13px
     }
 
@@ -32604,4 +32604,4 @@ ul.combobox-bundle-list::-webkit-scrollbar-thumb {
         left: 205px;
         top: 300px;
     }
-}
+}

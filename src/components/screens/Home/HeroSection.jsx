@@ -36,15 +36,15 @@ const HeroSection = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              <h1 style={{color: 'white' , fontSize: 16 , fontWeight: 500}}>Affordable Web Design for Small Businesses</h1>
+              <h4>Affordable Web Design for Small Businesses</h4>
 
-              <h2>
+              <h1>
                 Affordable  
                 <span style={{marginLeft: 12}}>
                    Web Design <br />
                   Small Businesses Trust to Grow
                 </span>
-              </h2>
+              </h1>
 
               <p>A professional website your small business can actually afford, with your brand and budget always our top priority.
               </p>
@@ -61,7 +61,7 @@ const HeroSection = () => {
 
               <Image
                 src="/images/Mockups/social-logo.webp"
-                alt="Social Logos"
+                alt="Social media platforms we market on"
                 width={400}
                 height={80}
                 className="img-fluid"
@@ -72,7 +72,7 @@ const HeroSection = () => {
           <div className="col-lg-6 col-sm-12 banner-img">
             <Image
               src="/images/Mockups/banner-side.webp"
-              alt="Banner"
+              alt="Website design mockups on desktop and mobile"
               width={700}
               height={600}
               className="img-fluid"
@@ -91,4 +91,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HeroSection;
