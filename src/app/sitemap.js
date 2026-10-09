@@ -1,4 +1,13 @@
+import { blogPosts } from "@/data/blogPosts";
+
 export default function sitemap() {
+  const posts = blogPosts.map((post) => ({
+    url: `https://webdesignspectrum.com/blog/${post.slug}`,
+    lastModified: post.datePublished,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
   return [
     {
       url: "https://webdesignspectrum.com/",
@@ -96,5 +105,12 @@ export default function sitemap() {
       changeFrequency: "weekly",
       priority: 0.3,
     },
+    {
+      url: "https://webdesignspectrum.com/blog",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+    ...posts,
   ];
 }
