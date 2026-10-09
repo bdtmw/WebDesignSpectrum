@@ -1,3 +1,4 @@
+import { Resend } from "resend";
 import PackageTemplate from "@/components/Template/PackageTemplate";
 import JourneyTemplate from "@/components/Template/JourneyTemplate";
 import ContactTemplate from "@/components/Template/ContactTemplate";
@@ -9,9 +10,16 @@ const BRIEF_ALLOWED_EXTENSIONS = ["pdf", "doc", "docx", "txt", "jpg", "jpeg", "p
 const BRIEF_MAX_BASE64_LENGTH = Math.ceil((2 * 1024 * 1024) / 3) * 4;
 
 export async function POST(req) {
-  console.log("🔥 /api/contact POST HIT");
-
   try {
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY is not set");
+      return Response.json(
+        { success: false, message: "Email service is not configured" },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await req.json();
 
     let subject = "";
@@ -86,42 +94,26 @@ export async function POST(req) {
         );
     }
 
-    const response = await fetch(
-      "https://api.smtp2go.com/v3/email/send",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          api_key: "api-82B809750B784CDEBCA58EAA7D3FBFCD",
+    const { data, error } = await resend.emails.send({
+      from: "Web Design Spectrum <noreply@webdesignspectrum.com>",
+      to: ["info@webdesignspectrum.com"],
+      subject,
+      html,
+      ...(attachments && {
+        attachments: attachments.map(({ filename, fileblob }) => ({
+          filename,
+          content: fileblob,
+        })),
+      }),
+    });
 
-          sender: "Web Design Spectrum <noreply@webdesignspectrum.com>",
+    if (error) {
+      console.error("Resend error:", error);
 
-          to: ["info@webdesignspectrum.com"],
-
-          subject,
-
-          html_body: html,
-
-          ...(attachments && { attachments }),
-        }),
-      }
-    );
-
-    const result = await response.json();
-
-    console.log("🔥 SMTP2GO status:", response.status);
-    console.log("🔥 SMTP2GO response:", result);
-
-    if (!response.ok || result.data?.succeeded !== 1) {
       return Response.json(
         {
           success: false,
-          message:
-            result.data?.error ||
-            result.error ||
-            "Failed to send email",
+          message: error.message || "Failed to send email",
         },
         { status: 500 }
       );
@@ -129,10 +121,10 @@ export async function POST(req) {
 
     return Response.json({
       success: true,
-      messageId: result.data?.email_id,
+      messageId: data?.id,
     });
   } catch (err) {
-    console.error("🔥 SMTP2GO error:", err);
+    console.error("Contact API error:", err);
 
     return Response.json(
       {
