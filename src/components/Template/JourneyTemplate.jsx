@@ -1,3 +1,5 @@
+const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
+
 export default function JourneyTemplate(data) {
   return `
   <div style="font-family:Arial,sans-serif;background:#f4f4f4;padding:40px;">
@@ -14,17 +16,17 @@ export default function JourneyTemplate(data) {
       <table width="100%" cellspacing="0" cellpadding="12" style="margin-top:20px;border-collapse:collapse;">
         <tr>
           <td><strong>Name</strong></td>
-          <td>${data.customer_name}</td>
+          <td>${escapeHtml(data.customer_name)}</td>
         </tr>
 
         <tr style="background:#fafafa;">
           <td><strong>Email</strong></td>
-          <td>${data.customer_email}</td>
+          <td>${escapeHtml(data.customer_email)}</td>
         </tr>
 
         <tr>
           <td><strong>Phone</strong></td>
-          <td>${data.customer_phone}</td>
+          <td>${escapeHtml(data.customer_phone)}</td>
         </tr>
 
         <tr style="background:#fafafa;">
