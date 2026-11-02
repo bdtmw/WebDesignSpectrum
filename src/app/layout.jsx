@@ -12,6 +12,9 @@ import Script from "next/script";
 
 
 export const metadata = {
+  metadataBase: new URL("https://webdesignspectrum.com"),
+  title: { default: "Web Design Spectrum | Web Design and Development Services", template: "%s | Web Design Spectrum" },
+  description: "Professional web design and development services for small businesses across the United States.",
   icons: {
     icon: "/favicon.ico",
   },
