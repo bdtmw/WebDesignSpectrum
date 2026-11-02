@@ -19,7 +19,7 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 export const metadata = {
-    title: "Web Design Wyoming | Wyoming Web Design Company &amp; Agency",
+    title: "Web Design Wyoming | Wyoming Web Design Company & Agency",
 
     description:
         "Web Design Spectrum is a Wyoming web design company building custom, mobile-friendly, SEO-ready websites for businesses across the Cowboy State. Call (307) 218-3240",
