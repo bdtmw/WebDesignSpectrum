@@ -12,6 +12,7 @@ export async function POST(req) {
   console.log("🔥 /api/contact POST HIT");
 
   try {
+    if (!process.env.SMTP2GO_API_KEY) return Response.json({ success: false, message: "Email unavailable" }, { status: 503 });
     const body = await req.json();
 
     let subject = "";
@@ -94,7 +95,7 @@ export async function POST(req) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          api_key: "api-82B809750B784CDEBCA58EAA7D3FBFCD",
+          api_key: process.env.SMTP2GO_API_KEY,
 
           sender: "Web Design Spectrum <noreply@webdesignspectrum.com>",
 
