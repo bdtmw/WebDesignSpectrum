@@ -13,7 +13,25 @@ export async function POST(req) {
 
   try {
     if (!process.env.SMTP2GO_API_KEY) return Response.json({ success: false, message: "Email unavailable" }, { status: 503 });
-    const body = await req.json();
+    const contentLength = Number(req.headers.get("content-length") || 0);
+    if (contentLength > 3000000) return Response.json({success:false,message:"Request too large"},{status:413});
+    const raw = await req.text();
+    if (raw.length > 3000000) return Response.json({success:false,message:"Request too large"},{status:413});
+    let body;
+    try { body = JSON.parse(raw); } catch { return Response.json({success:false,message:"Invalid JSON"},{status:400}); }
+    const required = {
+      contact: ["fullName", "email", "phone", "budget"],
+      discount: ["name", "email", "phone", "service"],
+      package: ["name", "email", "phone", "packageName"],
+      journey: ["customer_name", "customer_email", "customer_phone"],
+      webBrief: ["name", "email", "phone", "businessName", "websitePurpose"],
+    };
+    const fields = body && typeof body === "object" && !Array.isArray(body) && required[body.formType];
+    if (!fields || fields.some(k => typeof body[k] !== "string" || !body[k].trim() || body[k].length > 2000))
+      return Response.json({success:false,message:"Invalid form fields"},{status:400});
+    const email = body.email || body.customer_email;
+    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email))
+      return Response.json({success:false,message:"Invalid email address"},{status:400});
 
     let subject = "";
     let html = "";
@@ -113,7 +131,7 @@ export async function POST(req) {
     const result = await response.json();
 
     console.log("🔥 SMTP2GO status:", response.status);
-    console.log("🔥 SMTP2GO response:", result);
+
 
     if (!response.ok || result.data?.succeeded !== 1) {
       return Response.json(
@@ -138,7 +156,7 @@ export async function POST(req) {
     return Response.json(
       {
         success: false,
-        message: err.message || "Something went wrong",
+        message: "Something went wrong",
       },
       { status: 500 }
     );
