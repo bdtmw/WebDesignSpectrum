@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       disallow: "",
     },
-    sitemap: "https://www.webdesignspectrum.com/",
+    sitemap: "https://webdesignspectrum.com/sitemap.xml",
   };
 }
