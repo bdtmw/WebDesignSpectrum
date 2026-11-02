@@ -60,7 +60,7 @@ const ContactForm = () => {
                 window.gtag("event", "form_submit", {
                     form_name: "hero_form",
                     page_name: window.location.pathname,
-            debug_mode: true,
+
                 });
             }
                 
