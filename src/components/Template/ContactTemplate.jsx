@@ -1,3 +1,5 @@
+const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
+
 export default function ContactTemplate(data) {
   return `
   <div style="font-family:Arial,sans-serif;background:#f4f4f4;padding:40px;">
@@ -14,27 +16,27 @@ export default function ContactTemplate(data) {
       <table width="100%" cellspacing="0" cellpadding="12" style="margin-top:20px;border-collapse:collapse;">
         <tr>
           <td><strong>Full Name</strong></td>
-          <td>${data.fullName}</td>
+          <td>${escapeHtml(data.fullName)}</td>
         </tr>
 
         <tr style="background:#fafafa;">
           <td><strong>Email</strong></td>
-          <td>${data.email}</td>
+          <td>${escapeHtml(data.email)}</td>
         </tr>
 
         <tr>
           <td><strong>Phone</strong></td>
-          <td>${data.phone}</td>
+          <td>${escapeHtml(data.phone)}</td>
         </tr>
 
         <tr style="background:#fafafa;">
           <td><strong>Budget</strong></td>
-          <td>${data.budget}</td>
+          <td>${escapeHtml(data.budget)}</td>
         </tr>
 
         <tr>
           <td><strong>Page</strong></td>
-          <td>${data.src}</td>
+          <td>${escapeHtml(data.src)}</td>
         </tr>
       </table>
 
