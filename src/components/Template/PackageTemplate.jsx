@@ -1,3 +1,5 @@
+const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
+
 export default function PackageTemplate(data) {
   return `
   <div style="font-family:Arial,sans-serif;background:#f4f4f4;padding:40px;">
@@ -14,22 +16,22 @@ export default function PackageTemplate(data) {
       <table width="100%" cellspacing="0" cellpadding="12" style="margin-top:20px;border-collapse:collapse;">
         <tr>
           <td><strong>Name</strong></td>
-          <td>${data.name}</td>
+          <td>${escapeHtml(data.name)}</td>
         </tr>
 
         <tr style="background:#fafafa;">
           <td><strong>Email</strong></td>
-          <td>${data.email}</td>
+          <td>${escapeHtml(data.email)}</td>
         </tr>
 
         <tr>
           <td><strong>Phone</strong></td>
-          <td>${data.phone}</td>
+          <td>${escapeHtml(data.phone)}</td>
         </tr>
 
         <tr style="background:#fafafa;">
           <td><strong>Package</strong></td>
-          <td>${data.packageName}</td>
+          <td>${escapeHtml(data.packageName)}</td>
         </tr>
       </table>
 
