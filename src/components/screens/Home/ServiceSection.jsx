@@ -31,7 +31,7 @@ const services = [
         title: "Mobile ",
         subtitle: "Application",
         desc: 'iOS & Android development',
-        href: "/cms-website-development",
+        href: "/mobile-application-development",
         delay: 800,
     },
     {
