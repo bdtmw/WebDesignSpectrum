@@ -1,3 +1,6 @@
+import ServicePageContent from "@/components/screens/Services/ServicePageContent";
+import { getServicePageBySlug } from "@/lib/servicePages";
+
 import React from 'react'
 import FaqSection from '@/components/sections/FaqSection'
 import BannerSection from '@/components/sections/BannerSection'
@@ -18,7 +21,7 @@ import Script from 'next/script'
 
 
 
-export const metadata = {
+const defaultMetadata = {
     title: "CMS Website Development Services | Custom CMS Development Company",
 
     description:
@@ -216,4 +219,23 @@ const Page = () => {
     );
 };
 
-export default Page;
+
+
+export async function generateMetadata() {
+  const page = getServicePageBySlug("cms-website-development");
+  if (!page) return defaultMetadata;
+
+  return {
+    ...defaultMetadata,
+    title: page.meta_title || page.title,
+    description: page.meta_description || defaultMetadata.description,
+    keywords: page.keyword ? [page.keyword] : defaultMetadata.keywords,
+    alternates: { canonical: "/cms-website-development" },
+  };
+}
+
+export default function ServicePageEntry() {
+  const page = getServicePageBySlug("cms-website-development");
+  const ExistingPage = Page;
+  return page ? <ServicePageContent page={page} /> : <ExistingPage />;
+}

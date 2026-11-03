@@ -1,3 +1,6 @@
+import ServicePageContent from "@/components/screens/Services/ServicePageContent";
+import { getServicePageBySlug } from "@/lib/servicePages";
+
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -18,7 +21,7 @@ import ServiceDetailSection from '@/components/screens/Services/ServiceDetailSec
 
 
 
-export const metadata = {
+const defaultMetadata = {
     title: "Logo and Branding Services | Logo Design and Branding Agency",
 
     description:
@@ -221,4 +224,23 @@ const Page = () => {
     );
 }
 
-export default Page;
+
+
+export async function generateMetadata() {
+  const page = getServicePageBySlug("logo-and-branding");
+  if (!page) return defaultMetadata;
+
+  return {
+    ...defaultMetadata,
+    title: page.meta_title || page.title,
+    description: page.meta_description || defaultMetadata.description,
+    keywords: page.keyword ? [page.keyword] : defaultMetadata.keywords,
+    alternates: { canonical: "/logo-and-branding" },
+  };
+}
+
+export default function ServicePageEntry() {
+  const page = getServicePageBySlug("logo-and-branding");
+  const ExistingPage = Page;
+  return page ? <ServicePageContent page={page} /> : <ExistingPage />;
+}

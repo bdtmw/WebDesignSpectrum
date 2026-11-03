@@ -1,4 +1,5 @@
 import { timingSafeEqual } from "node:crypto";
+import { resolveServicePagePath } from "@/lib/servicePages";
 
 export const runtime = "nodejs";
 
@@ -64,6 +65,13 @@ function validateArticle(payload) {
       return { error: `${field} must be a string or null.` };
     }
   }
+
+  if (payload.content_type !== undefined && !["blog", "service_page"].includes(payload.content_type)) {
+    return { error: "content_type must be blog or service_page." };
+  }
+  if (payload.target_path !== undefined && !isStringOrNull(payload.target_path)) {
+    return { error: "target_path must be a string or null." };
+  }
   if (payload.slug !== undefined && (typeof payload.slug !== "string" || !payload.slug.trim())) {
     return { error: "slug must be a non-empty string when provided." };
   }
@@ -88,7 +96,7 @@ function validateArticle(payload) {
       meta_title: payload.meta_title,
       meta_description: payload.meta_description,
       slug,
-      url: payload.url || `/blog/${slug}`,
+      url: payload.url,
       featured_image_url: payload.featured_image_url,
       featured_image_alt: payload.featured_image_alt,
       images: payload.images,
@@ -123,7 +131,7 @@ export async function POST(request) {
   }
 
   const githubToken = process.env.GITHUB_CONTENT_TOKEN;
-  if (!githubToken) return json({ error: "Article storage is not configured." }, 503);
+  if (!githubToken) return json({ error: "Content storage is not configured." }, 503);
 
   const repository = process.env.ARTICLE_GITHUB_REPOSITORY || "bdtmw/WebDesignSpectrum";
   const branch = process.env.ARTICLE_GITHUB_BRANCH || "main";
@@ -146,7 +154,32 @@ export async function POST(request) {
   const validation = validateArticle(payload);
   if (validation.error) return json({ error: validation.error }, 400);
   const article = validation.article;
-  const path = `content/articles/${article.slug}.json`;
+  const requestedType = payload.content_type;
+  const serviceTarget = resolveServicePagePath(payload.target_path || payload.url);
+  let destination;
+
+  if (requestedType === "service_page") {
+    if (!serviceTarget) {
+      return json({ error: "target_path or url must match an existing service page URL." }, 400);
+    }
+    destination = { type: "service_page", slug: serviceTarget.slug, url: serviceTarget.route };
+  } else if (requestedType === "blog") {
+    destination = { type: "blog", slug: article.slug, url: `/blog/${article.slug}` };
+  } else if (serviceTarget) {
+    destination = { type: "service_page", slug: serviceTarget.slug, url: serviceTarget.route };
+  } else {
+    destination = { type: "blog", slug: article.slug, url: `/blog/${article.slug}` };
+  }
+
+  const record = {
+    ...article,
+    slug: destination.slug,
+    url: destination.url,
+    content_type: destination.type,
+  };
+  const path = destination.type === "service_page"
+    ? `content/service-pages/${destination.slug}.json`
+    : `content/articles/${destination.slug}.json`;
   const encodedPath = path.split("/").map(encodeURIComponent).join("/");
   const base = `${repository}/contents/${encodedPath}`;
   const ref = encodeURIComponent(branch);
@@ -157,14 +190,14 @@ export async function POST(request) {
     const file = await existing.json();
     existingSha = file.sha;
   } else if (existing.status !== 404) {
-    return json({ error: "Could not check the existing article in GitHub." }, 502);
+    return json({ error: "Could not check the existing content in GitHub." }, 502);
   }
 
-  const content = Buffer.from(`${JSON.stringify(article, null, 2)}\n`, "utf8").toString("base64");
+  const content = Buffer.from(`${JSON.stringify(record, null, 2)}\n`, "utf8").toString("base64");
   const saved = await githubRequest(base, githubToken, {
     method: "PUT",
     body: JSON.stringify({
-      message: `${existingSha ? "Update" : "Add"} article: ${article.title}`,
+      message: `${existingSha ? "Update" : "Add"} ${destination.type === "service_page" ? "service page" : "article"}: ${record.title}`,
       content,
       branch,
       ...(existingSha ? { sha: existingSha } : {}),
@@ -172,14 +205,15 @@ export async function POST(request) {
   });
 
   if (!saved.ok) {
-    return json({ error: "GitHub could not save the article. Please retry the request." }, saved.status === 409 ? 409 : 502);
+    return json({ error: "GitHub could not save the content. Please retry the request." }, saved.status === 409 ? 409 : 502);
   }
 
   return json({
     success: true,
-    document_id: article.document_id,
-    slug: article.slug,
-    url: article.url,
+    document_id: record.document_id,
+    content_type: destination.type,
+    slug: record.slug,
+    url: record.url,
     storage_path: path,
     action: existingSha ? "updated" : "created",
   }, existingSha ? 200 : 201);

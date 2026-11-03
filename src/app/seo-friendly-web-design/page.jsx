@@ -1,3 +1,6 @@
+import ServicePageContent from "@/components/screens/Services/ServicePageContent";
+import { getServicePageBySlug } from "@/lib/servicePages";
+
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -18,7 +21,7 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 
-export const metadata = {
+const defaultMetadata = {
     title: "SEO Friendly Web Design Service | SEO Friendly Web Design Company",
 
     description:
@@ -218,4 +221,23 @@ const page = () => {
     )
 }
 
-export default page
+
+
+export async function generateMetadata() {
+  const page = getServicePageBySlug("seo-friendly-web-design");
+  if (!page) return defaultMetadata;
+
+  return {
+    ...defaultMetadata,
+    title: page.meta_title || page.title,
+    description: page.meta_description || defaultMetadata.description,
+    keywords: page.keyword ? [page.keyword] : defaultMetadata.keywords,
+    alternates: { canonical: "/seo-friendly-web-design" },
+  };
+}
+
+export default function ServicePageEntry() {
+  const page = getServicePageBySlug("seo-friendly-web-design");
+  const ExistingPage = page;
+  return page ? <ServicePageContent page={page} /> : <ExistingPage />;
+}
