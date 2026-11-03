@@ -131,7 +131,7 @@ export async function POST(request) {
   }
 
   const githubToken = process.env.GITHUB_CONTENT_TOKEN;
-  if (!githubToken) return json({ error: "Article storage is not configured." }, 503);
+  if (!githubToken) return json({ error: "Content storage is not configured." }, 503);
 
   const repository = process.env.ARTICLE_GITHUB_REPOSITORY || "bdtmw/WebDesignSpectrum";
   const branch = process.env.ARTICLE_GITHUB_BRANCH || "main";
@@ -190,7 +190,7 @@ export async function POST(request) {
     const file = await existing.json();
     existingSha = file.sha;
   } else if (existing.status !== 404) {
-    return json({ error: "Could not check the existing article in GitHub." }, 502);
+    return json({ error: "Could not check the existing content in GitHub." }, 502);
   }
 
   const content = Buffer.from(`${JSON.stringify(record, null, 2)}\n`, "utf8").toString("base64");
