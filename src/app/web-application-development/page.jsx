@@ -240,7 +240,7 @@ export async function generateMetadata() {
 }
 
 export default function ServicePageEntry() {
-  const page = getServicePageBySlug("web-application-development");
+  const servicePage = getServicePageBySlug("web-application-development");
   const ExistingPage = page;
-  return page ? <ServicePageContent page={page} /> : <ExistingPage />;
+  return servicePage ? <ServicePageContent page={servicePage} /> : <ExistingPage />;
 }
