@@ -88,7 +88,7 @@ function validateArticle(payload) {
       meta_title: payload.meta_title,
       meta_description: payload.meta_description,
       slug,
-      url: payload.url,
+      url: payload.url || `/blog/${slug}`,
       featured_image_url: payload.featured_image_url,
       featured_image_alt: payload.featured_image_alt,
       images: payload.images,
@@ -179,6 +179,7 @@ export async function POST(request) {
     success: true,
     document_id: article.document_id,
     slug: article.slug,
+    url: article.url,
     storage_path: path,
     action: existingSha ? "updated" : "created",
   }, existingSha ? 200 : 201);
