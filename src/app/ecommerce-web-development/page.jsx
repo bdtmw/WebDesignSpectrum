@@ -1,3 +1,6 @@
+import ServicePageContent from "@/components/screens/Services/ServicePageContent";
+import { getServicePageBySlug } from "@/lib/servicePages";
+
 import { websitePortfolio } from '@/components/hooks/Portfolio'
 import PortfolioSection from '@/components/screens/Home/PortfolioSection'
 import WorkDetailSection from '@/components/screens/Home/WorkDetailSection'
@@ -18,7 +21,7 @@ import React from 'react'
 
 
 
-export const metadata = {
+const defaultMetadata = {
     title: "Ecommerce Web Development Services | Ecommerce Development Agency",
 
     description:
@@ -221,4 +224,23 @@ const Page = () => {
     );
 };
 
-export default Page;
+
+
+export async function generateMetadata() {
+  const page = getServicePageBySlug("ecommerce-web-development");
+  if (!page) return defaultMetadata;
+
+  return {
+    ...defaultMetadata,
+    title: page.meta_title || page.title,
+    description: page.meta_description || defaultMetadata.description,
+    keywords: page.keyword ? [page.keyword] : defaultMetadata.keywords,
+    alternates: { canonical: "/ecommerce-web-development" },
+  };
+}
+
+export default function ServicePageEntry() {
+  const page = getServicePageBySlug("ecommerce-web-development");
+  const ExistingPage = Page;
+  return page ? <ServicePageContent page={page} /> : <ExistingPage />;
+}
