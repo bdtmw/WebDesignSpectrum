@@ -1,3 +1,6 @@
+import ServicePageContent from "@/components/screens/Services/ServicePageContent";
+import { getServicePageBySlug } from "@/lib/servicePages";
+
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -18,7 +21,7 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 
-export const metadata = {
+const defaultMetadata = {
     title: "Social Media Marketing Services for Small Businesses | Web Design Spectrum",
 
     description:
@@ -227,4 +230,23 @@ const page = () => {
     )
 }
 
-export default page
+
+
+export async function generateMetadata() {
+  const page = getServicePageBySlug("social-media-marketing-services-for-small-businesses");
+  if (!page) return defaultMetadata;
+
+  return {
+    ...defaultMetadata,
+    title: page.meta_title || page.title,
+    description: page.meta_description || defaultMetadata.description,
+    keywords: page.keyword ? [page.keyword] : defaultMetadata.keywords,
+    alternates: { canonical: "/social-media-marketing-services-for-small-businesses" },
+  };
+}
+
+export default function ServicePageEntry() {
+  const page = getServicePageBySlug("social-media-marketing-services-for-small-businesses");
+  const ExistingPage = page;
+  return page ? <ServicePageContent page={page} /> : <ExistingPage />;
+}
