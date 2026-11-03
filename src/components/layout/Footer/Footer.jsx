@@ -37,6 +37,7 @@ const footerColumns = [
     links: [
       { label: "Home", href: "/" },
       { label: "Portfolio", href: "/portfolio" },
+      { label: "Blog", href: "/blog" },
       { label: "Packages", href: "/packages" },
     ],
   },
