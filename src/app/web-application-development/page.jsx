@@ -1,3 +1,6 @@
+import ServicePageContent from "@/components/screens/Services/ServicePageContent";
+import { getServicePageBySlug } from "@/lib/servicePages";
+
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -19,7 +22,7 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 
-export const metadata = {
+const defaultMetadata = {
     title: "Web Application Development Services | Web App Development Company",
 
     description:
@@ -221,4 +224,23 @@ const page = () => {
     )
 }
 
-export default page
+
+
+export async function generateMetadata() {
+  const page = getServicePageBySlug("web-application-development");
+  if (!page) return defaultMetadata;
+
+  return {
+    ...defaultMetadata,
+    title: page.meta_title || page.title,
+    description: page.meta_description || defaultMetadata.description,
+    keywords: page.keyword ? [page.keyword] : defaultMetadata.keywords,
+    alternates: { canonical: "/web-application-development" },
+  };
+}
+
+export default function ServicePageEntry() {
+  const page = getServicePageBySlug("web-application-development");
+  const ExistingPage = page;
+  return page ? <ServicePageContent page={page} /> : <ExistingPage />;
+}
