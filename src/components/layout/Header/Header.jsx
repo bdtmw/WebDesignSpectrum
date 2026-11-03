@@ -64,6 +64,10 @@ const desktopMenuItems = [
     // items: portfolioItems,
   },
   {
+    href: "/blog",
+    label: "Blog",
+  },
+  {
     href: "/about-us",
     label: "About Us",
   },
@@ -89,6 +93,10 @@ const overlayMenuItems = [
   {
     href: "/portfolio",
     label: "Portfolio",
+  },
+  {
+    href: "/blog",
+    label: "Blog",
   },
   {
     href: "/about-us",
