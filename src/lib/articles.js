@@ -51,7 +51,7 @@ export function getArticleDescription(article) {
 
   return article.body
     .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
-    .replace(/\[[^\]]*\]\([^)]*\)/g, "$1")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
     .replace(/[#>*_\x60-]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
