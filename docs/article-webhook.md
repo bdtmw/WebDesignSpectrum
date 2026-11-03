@@ -37,7 +37,7 @@ curl -X POST "https://webdesignspectrum.com/api/webhooks/articles" \
   --data-binary @article.json
 ```
 
-The endpoint validates the payload and saves it as `content/articles/<slug>.json` in the configured GitHub branch. Sending the same slug updates that article file. A new file returns HTTP `201`; an update returns HTTP `200`.
+The endpoint validates the payload and saves it as `content/articles/<slug>.json` in the configured GitHub branch. Sending the same slug updates that article file. If `url` is null, the endpoint sets it to `/blog/<slug>`. A new file returns HTTP `201`; an update returns HTTP `200`. The success response includes the public article URL.
 
 ## Responses
 
