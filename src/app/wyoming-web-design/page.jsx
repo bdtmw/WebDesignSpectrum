@@ -1,3 +1,6 @@
+import ServicePageContent from "@/components/screens/Services/ServicePageContent";
+import { getServicePageBySlug } from "@/lib/servicePages";
+
 import React from 'react'
 import Script from 'next/script'
 import FaqSection from '@/components/sections/FaqSection'
@@ -18,7 +21,7 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 
-export const metadata = {
+const defaultMetadata = {
     title: "Web Design Wyoming | Wyoming Web Design Company & Agency",
 
     description:
@@ -219,4 +222,23 @@ const StaticWebsite = () => {
     )
 }
 
-export default StaticWebsite
+
+
+export async function generateMetadata() {
+  const page = getServicePageBySlug("wyoming-web-design");
+  if (!page) return defaultMetadata;
+
+  return {
+    ...defaultMetadata,
+    title: page.meta_title || page.title,
+    description: page.meta_description || defaultMetadata.description,
+    keywords: page.keyword ? [page.keyword] : defaultMetadata.keywords,
+    alternates: { canonical: "/wyoming-web-design" },
+  };
+}
+
+export default function ServicePageEntry() {
+  const page = getServicePageBySlug("wyoming-web-design");
+  const ExistingPage = StaticWebsite;
+  return page ? <ServicePageContent page={page} /> : <ExistingPage />;
+}
