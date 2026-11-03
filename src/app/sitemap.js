@@ -1,3 +1,5 @@
+import { getArticles } from "@/lib/articles";
+
 export default function sitemap() {
   return [
     {
@@ -75,5 +77,11 @@ export default function sitemap() {
             changeFrequency: "monthly",
       priority: 0.8,
     },
+    ...getArticles().map((article) => ({
+      url: `https://webdesignspectrum.com/blog/${article.slug}`,
+      lastModified: article.created_at ? new Date(article.created_at) : undefined,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    })),
   ];
 }

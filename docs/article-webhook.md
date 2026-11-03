@@ -37,10 +37,10 @@ curl -X POST "https://webdesignspectrum.com/api/webhooks/articles" \
   --data-binary @article.json
 ```
 
-The endpoint validates the payload and saves it as `content/articles/<slug>.json` in the configured GitHub branch. Sending the same slug updates that article file. A new file returns HTTP `201`; an update returns HTTP `200`.
+The endpoint validates the payload and saves it as `content/articles/<slug>.json` in the configured GitHub branch. Sending the same slug updates that article file. If `url` is null, the endpoint sets it to `/blog/<slug>`. A new file returns HTTP `201`; an update returns HTTP `200`. The success response includes the public article URL.
 
 ## Responses
 
 Success returns `success`, `document_id`, `slug`, `storage_path`, and whether the file was created or updated. Invalid JSON or fields return `400`, a missing or incorrect Bearer token returns `401`, an oversized payload returns `413`, and upstream GitHub failures return `502`.
 
-This endpoint stores incoming article records in the repository. It does not currently add a public blog listing or render the Markdown as a page.
+Incoming articles are listed at `/blog` and rendered as public Markdown pages at `/blog/<slug>`. The article routes and sitemap are generated from the JSON records in `content/articles/`, so articles saved by the webhook become available with the deployment triggered by the repository update.
