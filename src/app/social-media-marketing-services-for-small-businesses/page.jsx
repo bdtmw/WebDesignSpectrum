@@ -246,7 +246,7 @@ export async function generateMetadata() {
 }
 
 export default function ServicePageEntry() {
-  const page = getServicePageBySlug("social-media-marketing-services-for-small-businesses");
+  const servicePage = getServicePageBySlug("social-media-marketing-services-for-small-businesses");
   const ExistingPage = page;
-  return page ? <ServicePageContent page={page} /> : <ExistingPage />;
+  return servicePage ? <ServicePageContent page={servicePage} /> : <ExistingPage />;
 }
