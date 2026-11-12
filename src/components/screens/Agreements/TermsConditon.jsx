@@ -98,6 +98,15 @@ export default function TermsCondition() {
 
 
 
+                            <h3>Refund &amp; Cancellation Policy for Domain, Hosting, Server and SSL Services</h3>
+                            <p><b>1. Domain Registration:</b> Once a domain has been registered or renewed, the payment is non-refundable.</p>
+                            <p><b>2. Web Hosting &amp; Servers:</b> Payments for hosting plans, dedicated servers, VPS, and other server-related services are non-refundable after purchase or activation.</p>
+                            <p><b>3. SSL Certificates:</b> Once an SSL certificate has been purchased, issued, or activated, no refund will be provided.</p>
+                            <p><b>4. Cancellation Requests:</b> Clients may request cancellation of services; however, cancellation does not entitle them to a refund for payments already made.</p>
+                            <p><b>5. Client Responsibility:</b> Clients are responsible for reviewing service details and requirements before making payment.</p>
+                            <p>By completing the payment, the client acknowledges and agrees to this Refund &amp; Cancellation Policy.</p>
+                            <p><b>Important:</b> No refunds will be issued for purchased domain, hosting, server, or SSL services under any circumstances, except where required by applicable law.</p>
+
                             <h3>Amendment Policy</h3>
                             <p>
                                 We provide an unlimited amendments guarantee. Through this guarantee customers can ask us for unlimited amendments and we will entertain the amendment request.
