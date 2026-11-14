@@ -5,7 +5,7 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 export const metadata = {
-  title: "Terms & Conditions | Web Design Spectrum",
+  title: "Terms & Conditions",
   description:
     "Review our terms and conditions covering website use, services, payments, responsibilities, and important policies for Web Design Spectrum clients.",
   alternates: {
@@ -18,7 +18,7 @@ const page = () => {
     return (
         <div>
 
-            <BannerSection title={'Terms And Conditions'} description={"Expand your global reach and showcase your products and services with the expert support of Web Design Spectrum."} minititle={'Web Design Spectrum'}></BannerSection>
+            <BannerSection title={'Terms And Conditions'} description={"Review the terms that apply to using our website and engaging Web Design Spectrum for services, including payments and client responsibilities."} minititle={'Web Design Spectrum'}></BannerSection>
 
 
             <TermsCondition />
