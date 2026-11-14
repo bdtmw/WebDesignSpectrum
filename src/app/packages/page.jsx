@@ -7,7 +7,7 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 export const metadata = {
-    title: "Web Design Packages & Pricing | Web Design Spectrum",
+    title: "Web Design Packages & Pricing",
     description:
         "Explore affordable web design packages for startups and businesses. Choose flexible website design plans tailored to your goals and budget.",
     alternates: {
@@ -20,7 +20,7 @@ const page = () => {
     return (
         <>
             <div>
-                <BannerSection title={'Business Owner'} description={"Our team of expert web designers has meticulously crafted cost-effective packages to suit businesses of all sizes. Whether you're a startup or an established enterprise, our affordable offerings ensure you receive high-quality web design services without breaking the bank."} minititle={'Affordable Solutions for Every'}></BannerSection>
+                <BannerSection title={'Web Design Packages & Pricing'} description={"Compare our website design and development packages, review the features included, and find a starting point for your business. Contact Web Design Spectrum to discuss your pages, functionality, and project scope before choosing a package."} minititle={'Website Design and Development'}></BannerSection>
 
                 <PackageSection />
                 <ComboPackageSection></ComboPackageSection>
