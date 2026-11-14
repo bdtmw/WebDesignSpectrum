@@ -16,9 +16,9 @@ const bannerPoints = [
 ];
 
 export const metadata = {
-  title: "About Us | Web Design & Digital Solutions Experts",
+  title: "About Our Web Design Team",
   description:
-    "Learn about Us Web Design Spectrum and our expert team delivering web design, development, SEO, digital marketing, and branding solutions.",
+    "Meet Web Design Spectrum and explore our approach to website design, development, branding, and digital marketing for businesses.",
   alternates: {
     canonical: "https://webdesignspectrum.com/about-us",
   },
@@ -29,7 +29,7 @@ const page = () => {
   return (
     <div>
 
-      <BannerSection title={'We Craft Designs  With Flawless Pixels'} bannerPoints={bannerPoints}  minititle={'Innovative Collective of Creative Minds'}></BannerSection>
+      <BannerSection title={'About Web Design Spectrum'} bannerPoints={bannerPoints}  minititle={'Innovative Collective of Creative Minds'}></BannerSection>
 
       <InnerAboutSection></InnerAboutSection>
       <ExpertiseSection></ExpertiseSection>
