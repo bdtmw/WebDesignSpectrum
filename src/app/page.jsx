@@ -1,6 +1,5 @@
 
 import React from 'react'
-import Script from 'next/script'
 import HeroSection from '@/components/screens/Home/HeroSection'
 import MainFeature from '@/components/screens/Home/MainFeature'
 import ServiceSection from '@/components/screens/Home/ServiceSection'
@@ -13,11 +12,18 @@ import { animationPortfolio, logoDesigns, marketingPortfolio, websitePortfolio }
 
 
 export const metadata = {
-  title: "Affordable Web Design Services for Small Businesses | Web Design Spectrum",
+  title: { absolute: "Web Design Spectrum | Small Business Web Design" },
 
   description:
-    "Affordable web design services for small businesses. Professional, mobile-friendly websites from Web Design Spectrum with flexible packages and no hidden fees. Call (307) 218-3240.",
+    "Web Design Spectrum builds websites, ecommerce stores, and web applications for small businesses. Explore our services and discuss your project.",
 
+  openGraph: {
+    type: "website",
+    siteName: "Web Design Spectrum",
+    url: "https://webdesignspectrum.com/",
+    title: "Web Design Spectrum | Small Business Web Design",
+    description: "Web design, ecommerce, and web application development for small businesses.",
+  },
   keywords: [
     "affordable web design services",
     "affordable web design for small businesses",
@@ -57,37 +63,32 @@ const Home = () => {
 
   return (
     <>
-      <Script
-        id="local-business-schema"
+      <script
+        id="brand-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Web Design Spectrum",
-            description:
-              "Wyoming web design company offering custom websites, ecommerce, SEO and digital marketing.",
-            url: "https://webdesignspectrum.com/",
-            telephone: "+13072183240",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "1309 Coffeen Ave. STE 1200",
-              addressLocality: "Sheridan",
-              addressRegion: "WY",
-              postalCode: "82801",
-              addressCountry: "US",
-            },
-            areaServed: [
-              "Wyoming",
-              "Sheridan",
-              "Cheyenne",
-              "Casper",
-              "Laramie",
-              "Gillette",
-              "Jackson",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": "https://webdesignspectrum.com/#organization",
+                name: "Web Design Spectrum",
+                url: "https://webdesignspectrum.com/",
+                description: "Web design and development services for small businesses.",
+                telephone: "+13072183240",
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://webdesignspectrum.com/#website",
+                name: "Web Design Spectrum",
+                url: "https://webdesignspectrum.com/",
+                publisher: {
+                  "@id": "https://webdesignspectrum.com/#organization",
+                },
+              },
             ],
-            priceRange: "$$",
-          }),
+          }).replace(/</g, "\\u003c"),
         }}
       />
 
