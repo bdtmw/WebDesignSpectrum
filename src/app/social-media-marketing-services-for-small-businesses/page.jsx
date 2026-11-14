@@ -22,7 +22,7 @@ import BeginYourJourneySection from '@/components/sections/BeginYourJourneySecti
 
 
 const defaultMetadata = {
-    title: "Social Media Marketing Services for Small Businesses | Web Design Spectrum",
+    title: "Social Media Marketing Services for Small Businesses",
 
     description:
         "Affordable social media marketing services for small businesses. Web Design Spectrum manages your content, ads and community across every platform. Call (307) 218-3240.",
